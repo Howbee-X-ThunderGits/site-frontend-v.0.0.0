@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #4facfe, #caf8fb);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+    background: linear-gradient(to bottom, #4facfe, #caf8fb);
+    border-radius: 8px;
+    overflow: hidden; 
+    justify-content:space-evenly;
+}
+
+.left-content {
+    width: 25%;
+    height: 80vh;
+    color: white;
+    padding: 40px;
+    margin-left: 25%;
+    font-family: "Fasthand", cursive;
+}
+.placeholder-text{
+    color: grey;
+}
+
+.para{
+    display: flex;
+    flex-direction: row;
+    font-size: 50px;
+    font-family: "Fasthand", cursive;
+}
+.para p{
+    margin: 0;
+    margin-left: 20px;
+}
+
+.left-content h1 {
+    font-size: 7rem; 
+    line-height: 8rem;
+    font-weight: 400; 
+    color: black;
+    margin: 0;
+    
+}
+
+.left-content span {
+    font-weight: 400; 
+    color: #FFE815; 
+}
+
+.form-container {
+    width: 80vw;
+    height: 75vh;
+    margin: 55px;
+    background-color: white;
+    padding: 40px;
+    margin-right: 90px;
+    border-left: 1px solid #ccc;
+    border-radius: 20px;
+   
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.toggle-btn {
+    background: #FFE815; 
+    border: none;
+    padding: 10px 110px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #09203f; 
+    border-radius: 5px;
+}
+
+.toggle-btn.active {
+    border-bottom: 2px solid #FFE815;
+}
+
+.form {
+    display: none;
+}
+
+.form.active {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.invitation-code {
+    margin-top: 20px;
+  }
+  
+  .invitation-code input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  .invitation-code input[type="text"]:focus {
+    border-color: #337ab7;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+.password-container {
+    display: flex;
+    align-items: center;
+}
+
+.password-container input {
+    flex-grow: 1;
+}
+
+.toggle-password {
+    margin-left: 10px;
+    cursor: pointer;
+    color: grey;
+}
+
+form button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #c4c4bb;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.signup-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px; 
+}
+
+.signup-btn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #c4c4bb;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.signup-btn:hover,
+.toggle-btn:hover {
+    opacity: 0.8; 
+}
+
+form p {
+    margin-top: 0px;
+    text-align: center;
+    font-size: 14px; 
+}
+
+form p a {
+    color: blue;
+    text-decoration: none;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.terms input {
+    margin-right: 10px;
+}
+
+
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .left-content {
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+    }
+    .form-container {
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .left-content h1 {
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+    .para{
+        font-size: 25px;
+    }
+    .form-container {
+        padding: 20px;
+    }
+    .toggle-btn {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+    form input, .password-container input {
+        padding: 5px;
+    }
+    form button, .signup-btn {
+        padding: 5px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .left-content h1 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+    .para{
+        font-size: 20px;
+    }
+    .form-container {
+        padding: 10px;
+    }
+    .toggle-btn {
+        font-size: 12px;
+        padding: 5px 5px;
+    }
+    form input, .password-container input {
+        padding: 5px;
+    }
+    form button, .signup-btn {
+        padding: 5px 10px;
+    }
+}

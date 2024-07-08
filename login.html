@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Sign Up Form</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="para">
+            <p>Let the adventure begin</p>
+        </div>
+        <div class="left-content">
+            <h1><span>Dive</span> into the <span>Hive</span></h1>
+        </div>
+    </div>
+    <div class="form-container">
+        <div class="form-header">
+            <button id="login-btn" class="toggle-btn">Login</button>
+            <button id="signup-btn" class="toggle-btn active">Sign Up</button>
+        </div>
+        <div id="login-form" class="form hidden">
+            <h2>Login</h2>
+            <form>
+                <div class="placeholder-text">Email address/Phone no/Username</div>
+                <input type="email" placeholder="" required>
+                <div class="placeholder-text">Password</div>
+                <div class="password-container">
+                    <input type="password" id="login-password" placeholder="" required>
+                    <i class="fas fa-eye toggle-password" onclick="togglePasswordVisibility('login-password', this)"></i>
+                </div>
+                <button type="submit">Login</button>
+                <p>Don't have an account? <a href="#" id="show-signup">Sign up</a></p>
+            </form>
+        </div>
+        <div id="signup-form" class="form active">
+            <h2>Sign Up</h2>
+            <form>
+                <div class="placeholder-text">What should we call you?</div>
+                <input type="text" placeholder="" required>
+                <div class="placeholder-text">Email address</div>
+                <input type="email" placeholder="" required>
+                <div class="placeholder-text">Password</div>
+                <div class="password-container">
+                    <input type="password" id="signup-password" placeholder="" required>
+                    <i class="fas fa-eye toggle-password" onclick="togglePasswordVisibility('signup-password', this)"></i>
+                </div>
+                <div class="placeholder-text">Re-enter Password</div>
+                <div class="password-container">
+                    <input type="password" id="signup-reenter-password" placeholder="" required>
+                    <i class="fas fa-eye toggle-password" onclick="togglePasswordVisibility('signup-reenter-password', this)"></i>
+                </div>
+                <div class="invitation-code">
+                    <div class="placeholder-text">Invitation Code (Contact us to receive an invitation)</div>
+
+                    <input type="text" id="invitation-code" placeholder="" required>
+                </div>
+                <div class="terms">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I agree to the <a href="#">terms and conditions</a></label>
+                </div>
+                <div class="signup-actions">
+                    <button type="submit" class="signup-btn">Sign Up</button>
+                    <p>Already have an account? <a href="#" id="show-login">Log in</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
