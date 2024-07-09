@@ -1,93 +1,106 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap');
 
+* {
+    box-sizing: border-box;
+  }
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #4facfe, #caf8fb);
+    background: linear-gradient(to top, #a8ccfc 0%, #2797ec 100%);
 }
 
 .container {
     display: flex;
-    flex-direction: column;
-    width: 100vw;
-    height: auto;
-    background: linear-gradient(to bottom, #4facfe, #caf8fb);
-    border-radius: 8px;
-    overflow: hidden; 
-    justify-content:space-evenly;
-}
-
-.left-content {
-    width: 25%;
-    height: 80vh;
-    color: white;
-    padding: 40px;
-    margin-left: 25%;
-    font-family: "Fasthand", cursive;
-}
-.placeholder-text{
-    color: grey;
-}
-
-.para{
-    display: flex;
-    flex-direction: row;
-    font-size: 50px;
-    font-family: "Fasthand", cursive;
-}
-.para p{
+    justify-content: center;
+    align-items: center;
     margin: 0;
-    margin-left: 20px;
+  padding: 0;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background: url('/site-frontend-v.0.0.0/assets/signup\ imgs/cloud.png') no-repeat bottom center fixed,
+    url('/site-frontend-v.0.0.0/assets/signup\ imgs/cloud1.png') no-repeat top right fixed;
+    background-size: cover cover cover cover;
+
+}
+.left-content {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    color: white;
+    max-width: 100%;
+}
+
+.left-content p {
+    margin: -20px 0 0 -30px;
+    font-size: 3rem;
+    color: black;
+    font-family: Fasthand;
 }
 
 .left-content h1 {
-    font-size: 7rem; 
-    line-height: 8rem;
-    font-weight: 400; 
-    color: black;
+    font-size: 90px;
+    font-weight: 600;
+    line-height: 1.55;
     margin: 0;
-    
+    color: black;
+    font-family: Fasthand;
 }
 
-.left-content span {
-    font-weight: 400; 
-    color: #FFE815; 
+
+.left-content h1 span {
+    display: block;
+    color:  #FFE815;
 }
 
 .form-container {
-    width: 80vw;
-    height: 75vh;
-    margin: 55px;
+    flex: 1;
     background-color: white;
     padding: 40px;
-    margin-right: 90px;
     border-left: 1px solid #ccc;
-    border-radius: 20px;
-   
+    margin: 60px 130px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    align-self: center;
 }
 
 .form-header {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+form label {
+    margin-top: 3px;
+    margin-bottom: 5px;
+    color: grey;
 }
 
 .toggle-btn {
-    background: #FFE815; 
+    flex: 1;
+    background: none;
     border: none;
-    padding: 10px 110px;
+    padding: 10px 20px;
     cursor: pointer;
     font-size: 16px;
-    color: #09203f; 
-    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 .toggle-btn.active {
-    border-bottom: 2px solid #FFE815;
+    background-color: #FFE815;
 }
 
 .form {
@@ -96,10 +109,6 @@ body {
 
 .form.active {
     display: block;
-}
-
-.hidden {
-    display: none;
 }
 
 form {
@@ -113,149 +122,225 @@ form input {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-.invitation-code {
-    margin-top: 20px;
-  }
-  
-  .invitation-code input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-  }
-  
-  .invitation-code input[type="text"]:focus {
-    border-color: #337ab7;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
 
 .password-container {
+    position: relative;
+    margin-bottom: 15px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
 }
 
+.password-container .toggle-password {
+    align-self: flex-end;
+    margin-top: -20px;
+    cursor: pointer;
+    color: #8a8a8a;
+}
 .password-container input {
     flex-grow: 1;
+    padding-right: 30px;
 }
 
 .toggle-password {
-    margin-left: 10px;
+    position: absolute;
+    right: 10px;
     cursor: pointer;
-    color: grey;
-}
-
-form button {
-    padding: 10px 20px;
-    border-radius: 20px;
-    background-color: #c4c4bb;
-    color: white;
-    border: none;
-    cursor: pointer;
+    color: #979897;
 }
 
 .signup-actions {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 10px; 
+    margin-top: 10px;
 }
-
 .signup-btn {
     padding: 10px 20px;
     border-radius: 20px;
-    background-color: #c4c4bb;
     color: white;
     border: none;
     cursor: pointer;
-}
+    background-color: rgb(185, 184, 184);
 
-.signup-btn:hover,
-.toggle-btn:hover {
-    opacity: 0.8; 
 }
 
 form p {
-    margin-top: 0px;
+    margin: 10px 0;
     text-align: center;
-    font-size: 14px; 
 }
 
 form p a {
-    color: blue;
+    color: #0577c3;
     text-decoration: none;
 }
+form > a{
+    margin-top: 20px;
+    color: #0577c3;
 
+}
 .terms {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
-
+.terms label a{
+    color: black;
+}
 .terms input {
     margin-right: 10px;
 }
-
-
-@media (max-width: 1024px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
+.terms input[type="checkbox"] {
+    accent-color: #000; 
+  }
+  @media only screen and (min-width: 1000px ) and (max-width:1471px ){
+    .form-container {
+      transform: scale(0.9);
+      transform-origin: top left;
+      align-self: center;
+      margin: 20% 0;
+      margin-top: 28%;
     }
     .left-content {
         width: 100%;
-        margin: 0;
-        padding: 20px;
+        margin-bottom: 40px;
         text-align: center;
-    }
+      }
+      .left-content h1 {
+        font-size: 5rem;
+      }
+      .left-content p {
+        font-size: 2.5rem;
+        margin-top: -5%;
+      }
+  }
+  @media (max-width: 999px) {
     .form-container {
+        transform: scale(0.7);
+        transform-origin: top left;
+        align-self: center;
+        margin: 20% 0;
+        margin-top: 45%;
+    }
+    .left-content {
         width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+      .left-content h1 {
+        font-size: 4.5rem;
+      }
+      .left-content p {
+        font-size: 2.2rem;
+        margin-top: -5%;
+      }
+  }
+
+  @media (max-width: 725px) and (min-width: 400px ){
+    .container {
+        flex-direction: column-reverse; 
+      }
+    .left-content {
+        width: 100%;        
+        text-align: center;
+        order: 1;
         margin: 0;
-        padding: 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    .left-content h1 {
+        padding: 0; 
+        margin-top: 10%;
+         }
+      .left-content h1 {
         font-size: 3rem;
-        line-height: 3.5rem;
-    }
-    .para{
-        font-size: 25px;
-    }
-    .form-container {
-        padding: 20px;
-    }
-    .toggle-btn {
-        font-size: 14px;
-        padding: 5px 10px;
-    }
-    form input, .password-container input {
-        padding: 5px;
-    }
-    form button, .signup-btn {
-        padding: 5px 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .left-content h1 {
+        line-height: 1;
+      }
+      .left-content h1 span {
+        display: inline;
+      }
+      .left-content p {
         font-size: 2rem;
-        line-height: 2.5rem;
+        margin-top: 55%;
+      }
+     
+      .form-container {
+        transform: scale(0.6);
+        transform-origin: top left;
+        align-self: center;
+        width: 100%;
+        margin-top: 5%;
+        margin-left: 40%;
+        flex: 100%;
+        padding: 15px;
+        box-shadow: none;
+        border-radius: 15px;
     }
-    .para{
-        font-size: 20px;
-    }
-    .form-container {
+      .toggle-btn {
         padding: 10px;
+        font-size: 0.9rem;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      
+      .form {
+        padding: 20px;
+      }
+      
+      .signup-btn {
+        margin-top: 20px;
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+      }
+      
+      .terms {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      
+      .terms input {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+      
+      form small {
+        font-size: 0.8rem;
+      }
+      
+      form p {
+        font-size: 0.8rem;
+      }
+  
     }
-    .toggle-btn {
-        font-size: 12px;
-        padding: 5px 5px;
-    }
-    form input, .password-container input {
-        padding: 5px;
-    }
-    form button, .signup-btn {
-        padding: 5px 10px;
-    }
-}
+
+    @media (max-width: 400px) {
+        .container {
+            flex-direction: column-reverse; /* Reverse the order of the container elements */
+          }
+        .left-content {
+            width: 100%;        
+            text-align: center;
+            order: 1;
+            margin: 0;
+            padding: 0; 
+            margin-top:25%;
+             }
+          .left-content h1 {
+            font-size: 2.5rem;
+            margin-top: 5%;
+          }
+          .left-content h1 span {
+            display: inline;
+          }
+          .left-content p {
+            font-size: 1.8rem;
+            margin-top: 55%;
+          }
+         
+          .form-container {
+            transform: scale(0.6);
+            transform-origin: top left;
+            align-self: center;
+            width: 100%;
+            margin-top: 10%;
+            margin-left: 40%;
+            flex: 100%;
+            padding: 20px;
+        }   
+        }
