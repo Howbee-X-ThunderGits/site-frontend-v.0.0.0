@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.yoga-section {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Header Styles */
+header {
+  color: #fff;
+  font-family: 'DM Sans';
+}
+
+header h1 {
+  color: #000;
+  font-size: 70px;
+}
+
+header h1 span.highlight {
+  color: #FFDC2E;
+}
+
+header p {
+  font-family: 'Fasthand';
+  color: #000;
+  font-size: 45px;
+}
+.para1 {
+  font-family: 'Fasthand';
+}
+
+.para1 p {
+  font-size: 185%;
+}
+
+.para2 {
+  font-family: 'Fasthand';
+}
+
+.para2 p {
+  font-size: 185%;
+}
+
+.tagline span {
+  font-size: 40px;
+}
+
+.tagline span.how {
+  font-family: 'DM Sans';
+  text-decoration: underline;
+}
+
+.para3 {
+  font-family: 'Fasthand';
+}
+
+.para3 p {
+  font-size: 185%;
+}
+
+
+
+
+.left2 {
+  font-size: 25px;
+  font-family: 'DM Sans';
+
+}
+
+
+/*
+@media (max-width: 431px) {
+  header h1 {
+    font-size: 25px;
+  }
+
+  header p {
+    font-size: 15px;
+    margin-left: 40px;
+  }
+
+  .para1 p,
+  .para2 p,
+  .para3 p {
+    font-size: 90%;
+  }
+
+  .para1 img,
+  .para2 img,
+  .para3 img {
+    width: 8%;
+  }
+
+  .tagline span {
+    font-size: 15px;
+  }
+
+  .yoga {
+    left: 10%;
+    width: 100%;
+  }
+
+  .ellipse {
+    left: 21%;
+    width: 57%;
+  }
+
+  .right-cloud,
+  .left-cloud {
+    width: 85%;
+  }
+
+  .right-curve,
+  .left-curve {
+    width: 18%;
+  }
+
+  .right-curve {
+    bottom: 5%;
+    right: 10%;
+  }
+
+  .left-curve {
+    bottom: 8%;
+    width: 20%;
+    left: 11%;
+  }
+
+  .left2 {
+    bottom: 23%;
+    position: absolute;
+    font-size: 12px;
+    z-index: 1;
+    font-family: 'DM Sans';
+  }
+  .para1 {
+    font-family: 'Fasthand';
+    position: absolute;
+    bottom: 46%;
+    left: -11%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.para3 {
+  font-family: 'Fasthand';
+  position: absolute;
+  top: 66%;
+  right: 2%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+}
+.para3 img {
+  width: 15%;
+  position: absolute;
+  left: -15px;
+  bottom: 30px;
+}
+.para2 {
+  font-family: 'Fasthand';
+  position: absolute;
+  top: 33%;
+  right: -20%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+}
+header p {
+  font-size: 15px;
+  margin-left: 53px;
+}
+header h1 {
+  margin-bottom: -16px;
+}
+}
+
+@media only screen and (min-width:432px) and (max-width:913px){
+
+  .yoga {
+    left: 24%;
+    width: 65%;
+    bottom: 0;
+    z-index: 2;
+}
+.ellipse {
+  left: 32%;
+  bottom: 0;
+  width: 36%;
+}
+.right-curve {
+  bottom: 4%;
+  right: 25%;
+  width: 11%;
+}
+.left-curve {
+  bottom: 6%;
+  width: 13%;
+  left: 24%;
+}
+.right-cloud {
+  right: 12%;
+  bottom: 5%;
+  width: 50%;
+}
+.left-cloud {
+  width: 50%;
+  bottom: 0;
+  left: 10%;
+}
+.left2 {
+  bottom: 20%;
+  position: absolute;
+  font-size: 22px;
+  z-index: 1;
+  font-family: 'DM Sans';
+}
+.para1 {
+  font-family: 'Fasthand';
+  position: absolute;
+  bottom: 42%;
+  left: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.para2 {
+  font-family: 'Fasthand';
+  position: absolute;
+  top: 30%;
+  right: -20%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+}
+
+.para3 {
+  font-family: 'Fasthand';
+  position: absolute;
+  top: 59%;
+  right: 2%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+}
+}
+
+@media only screen and (min-width:914px) and (max-width:1281px){
+  .yoga {
+    left: 33%;
+    width: 45%;
+    bottom: 0;
+    z-index: 2;
+}
+.ellipse {
+  left: 37%;
+  bottom: 0;
+  width: 27%;
+}
+}
+.left-cloud {
+  width: 50%;
+  bottom: 0;
+  left: 15%;
+}
+.right-cloud {
+  right: 15%;
+  bottom: 5%;
+  width: 50%;
+}
+.left-curve {
+  bottom: 7%;
+  width: 10%;
+  left: 32%;
+}
+
+.right-curve {
+  bottom: 5%;
+  right: 31%;
+  width: 8%;
+}
+.left2 {
+  bottom: 30%;
+  position: absolute;
+  font-size: 20px;
+  z-index: 1;
+  font-family: 'DM Sans';
+}
+.para1 {
+  font-family: 'Fasthand';
+  position: absolute;
+  bottom: 58%;
+  left: 18%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.para2 {
+  font-family: 'Fasthand';
+  position: absolute;
+  top: 20%;
+  right: -2%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+}
+
+.para3 {
+  font-family: 'Fasthand';
+  position: absolute;
+  top: 54%;
+  right: 19%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+}
+header h1 {
+  color: #000;
+  font-size: 85px;
+  margin-bottom: -57px;
+}
+header p {
+  font-family: 'Fasthand';
+  color: #000;
+  font-size: 50px;
+  line-height: 1;
+  margin-bottom: 10px;
+  margin-left: 171px;
+}
+}
