@@ -7,33 +7,86 @@
   box-sizing: border-box;
 }
 
-.yoga-section {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
+.yoga-section{
+  max-height: 100vh;
+  overflow: hidden;
 }
 
-/* Header Styles */
-header {
+.image-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10vh;
+  position: relative;
+  
+}
+
+
+#yoga-img{
+  height: 90vh;
+  object-fit: contain;
+}
+
+
+.ellipse {
+  position: absolute;
+  z-index: -1;
+  bottom: -150px;
+  height: 50vh;
+  transform: translate(0,-50%);
+}
+
+.cloud{
+  position: absolute;
+  z-index: -5;
+  height: 35vh;
+}
+
+.right-cloud {
+  
+  transform: translate(30%,50%);
+}
+
+.left-cloud {
+  
+  transform: translate(-30%,80%);
+}
+
+.right-curve {
+  position: absolute;
+  
+  right: -110px;
+  bottom: 5px
+}
+
+.left-curve {
+  position: absolute;
+  transform: rotate(-25deg);
+  left: -120px;
+  bottom: 5px;
+}
+
+#choose-the-hive
+ {
   position: absolute;
   display: flex;
   flex-direction: column;
   color: #fff;
-  padding: 10px;
+  padding: 15px;
   font-family: 'DM Sans';
 }
 
-header h1 {
+#choose-the-hive h1 {
   color: #000;
   font-size: 70px;
   margin-bottom: -50px;
 }
 
-header h1 span.highlight {
+#choose-the-hive h1 span.highlight {
   color: #FFDC2E;
 }
 
-header p {
+#choose-the-hive p {
   font-family: 'Fasthand';
   color: #000;
   font-size: 45px;
@@ -42,58 +95,44 @@ header p {
   margin-left: 160px;
 }
 
-.image-container {
-  width: 100%;
-  height: 100%;
 
-}
-
-.image-container img {
+.left2 {
+  bottom: 30%;
   position: absolute;
+  font-size: 25px;
+  
+  font-family: 'DM Sans';
+  z-index: -1;
+  width: 100%;
+
 }
 
-.yoga {
-  left: 34%;
-  width: 40%;
-  bottom: 0;
-  z-index: 2;
+.left2 img {
+  width: 100vw;
+  height: auto;
+  object-fit: cover;
+  margin-left: 0;
+  margin-right: 0;
 }
 
-.ellipse {
-  left: 39%;
-  bottom: 0;
-  width: 22%;
+.left2 p {
+  margin-left: 2%;
 }
 
-.right-cloud {
-  right: 20%;
-  bottom: 5%;
-  width: 45%;
+.left2 hr{
+  margin: 5px 0;
+}
+.left hr:nth-child(2){
+  margin-top: 2rem;
 }
 
-.left-cloud {
-  width: 45%;
-  bottom: 0;
-  left: 18%;
-}
 
-.right-curve {
-  bottom: 6%;
-  right: 34%;
-  width: 7%;
-}
-
-.left-curve {
-  bottom: 9%;
-  width: 8%;
-  left: 33%;
-}
 
 .para1 {
   font-family: 'Fasthand';
   position: absolute;
   bottom: 65%;
-  left: 20%;
+  left:-18rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -111,8 +150,8 @@ header p {
 .para2 {
   font-family: 'Fasthand';
   position: absolute;
-  top: 12%;
-  right: 8%;
+  top: 0;
+  right:-30rem;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -147,8 +186,8 @@ header p {
 .para3 {
   font-family: 'Fasthand';
   position: absolute;
-  top: 45%;
-  right: 25%;
+  top: 40%;
+  right: -12rem;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -174,26 +213,35 @@ header p {
   flex-direction: row-reverse;
 }
 
-.left2 {
-  bottom: 30%;
-  position: absolute;
-  font-size: 25px;
-  z-index: 1;
-  font-family: 'DM Sans';
 
-}
-
-.left2 img {
+/* .yoga-section {
   width: 100vw;
-  height: auto;
-  object-fit: cover;
-  margin-left: 0;
-  margin-right: 0;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+} */
+
+/* Header Styles */
+/* 
+
+
+.image-container {
+  width: 100%;
+  height: 100%;
+
 }
 
-.left2 p {
-  margin-left: 2%;
+.image-container img {
+  position: absolute;
 }
+
+.yoga {
+  left: 34%;
+  width: 40%;
+  bottom: 0;
+  z-index: 2;
+}
+
 
 @media (max-width: 431px) {
   header h1 {
@@ -374,6 +422,14 @@ header h1 {
   justify-content: center;
 }
 }
+
+
+#yoga-img{
+  height: 85vh;
+  object-fit: contain;
+} */
+
+
 /*
 @media only screen and (min-width:914px) and (max-width:1281px){
   .yoga {
@@ -460,3 +516,11 @@ header p {
   margin-left: 171px;
 }
 }
+
+
+
+
+
+
+
+
