@@ -1,7 +1,8 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
 }
 
 body,
@@ -21,16 +22,17 @@ html {
             rgb(160, 203, 240),
             rgb(210, 203, 185),
             rgb(251, 201, 138));
-z-index: -1;
-    
+    z-index: -1;
 
 }
-.mountains{
+
+.mountains {
     position: fixed;
     top: 0;
-    
+
 }
-.mountains img{
+
+.mountains img {
     margin-top: 25vh;
     width: 100%;
     object-fit: contain;

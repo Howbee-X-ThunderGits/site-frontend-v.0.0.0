@@ -456,13 +456,13 @@ h1 {
         height: 60%;
     }
     .column1 .hex1 {
-        top: 19%;
+        top: 20%;
     }
     .column2 .hex2 {
-        top: 25%;
+        top: 26%;
     }
     .column3 .hex3 {
-        top: 19%;
+        top: 20%;
     }
     .hex1-text {
         font-size: 28px;
@@ -708,6 +708,15 @@ h1 {
         width:55%;
         height: 20vh;
     }  
+    .column1 .hex1 {
+        top: 26%;
+    }
+    .column2 .hex2 {
+        top: 32%;
+    }
+    .column3 .hex3 {
+        top: 26%;
+    }
    
 }
 @media only screen and (max-width: 700px){
@@ -820,17 +829,6 @@ h1 {
     }
 }
 @media only screen and (min-width: 320px) and (max-width: 499px){
-    /*
-    h2{
-        margin-top: 15%;
-        font-size: 20px;
-        font-weight: bold;
-    }
-    h1{
-        font-size: 17px;
-        top: 10%;
-        font-weight: bold;
-    }*/
     .columns {
         top:40%;
         height: 60vh;
@@ -873,13 +871,13 @@ h1 {
         height: 100%;
     }
     .column1 .hex1 {
-        top: 28%;
+        top: 30%;
     }
     .column2 .hex2 {
-        top: 34%;
+        top: 36%;
     }
     .column3 .hex3 {
-        top: 28%;
+        top: 30%;
     }
     .hex1-text {
         font-size: 8px;
@@ -903,8 +901,8 @@ h1 {
         width: 150px;
     } .column2 p {
         font-size: 8px;
-        left: -28%;
-        top: 16%;
+        left: -40%;
+        top: 22%;
         width: 100px;
     }
     .column3 p {
