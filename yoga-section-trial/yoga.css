@@ -57,7 +57,8 @@ header p {
 
 .yoga {
   left: 34%;
-  width: 40%;
+  /* width: 40%; */
+  height: 85vh;
   bottom: 0;
   z-index: 2;
 }
