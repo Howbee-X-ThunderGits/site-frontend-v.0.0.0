@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const signupTab = document.getElementById('signup-tab');
     const loginTab = document.getElementById('login-tab');
     const authFormBody = document.getElementById('auth-form-body');
-
     function showSignupForm() {
         authFormBody.innerHTML = `
             <form id="signup-form" action="#">

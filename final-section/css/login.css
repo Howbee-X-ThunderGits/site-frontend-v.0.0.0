@@ -164,7 +164,10 @@
   .auth-form-body .auth-switch a:hover {
     text-decoration: underline;
   }
-  
+  .auth_dive_into_the_hive h1{
+        font-family: "Fasthand", cursive;
+
+  }
   .auth-form-body .submit-btn {
     background-color: #007bff;
     color: #fff;
@@ -247,7 +250,6 @@
     }
   }
   
-  /* Define the cloud animation but initially paused */
   .cloud1 {
     animation: moveCloud1 3s ease-in-out forwards;
     

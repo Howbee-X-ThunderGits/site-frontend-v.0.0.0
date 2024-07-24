@@ -50,3 +50,5 @@ document.querySelector('.Parallex').addEventListener("scroll", function(){
 else{
     console.log("not working");
 }
+
+
