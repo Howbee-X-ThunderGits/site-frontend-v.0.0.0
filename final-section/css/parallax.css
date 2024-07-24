@@ -134,7 +134,7 @@ body {
   p {
     font-size: 32px;
     color: white;
-    width: 50%;
+    width: 70%;
     padding-left: 32%;
     letter-spacing: 3px;
     z-index: 100;
@@ -143,8 +143,8 @@ body {
 
 @media only screen and (max-width: 768px) {
   .section2 .bottom-text-container h1,
-  .bottom-text-container span,
-  .bottom-text-container p {
+.section2  .bottom-text-container span,
+.section2  .bottom-text-container p {
     padding-left: 10px;
     font-size: 32px;
   }
