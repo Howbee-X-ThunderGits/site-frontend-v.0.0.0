@@ -241,8 +241,11 @@ br {
     width: 10px;
   }
 
-  .right-text h1 {
+  .right-text .float {
     font-size: 3.5em;
+    font-family: "Fasthand",cursive;
+
+
   }
 
   .right-text h1 p {
