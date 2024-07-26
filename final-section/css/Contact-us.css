@@ -1,18 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,700&family=Fasthand&family=Felipa&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  overflow-x: hidden;
-}
-
+#Contact_us{
+  position: relative;
+  overflow: hidden;
 .container {
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 
 .top-content {
@@ -78,7 +70,7 @@ hr {
 
 .float {
   position: relative;
-  font-family: "Fasthand";
+  font-family: "Felipa", sans-serif;
   font-size: 30px;
   font-weight: 200;
   display: inline;
@@ -129,7 +121,7 @@ br {
 
 .imgs {
   position: relative;
-  background-image: url(./image/bg.png);
+  background-image: url(../assets/Contact-us/bg.png);
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -249,8 +241,11 @@ br {
     width: 10px;
   }
 
-  .right-text h1 {
+  .right-text .float {
     font-size: 3.5em;
+    font-family: "Fasthand",cursive;
+
+
   }
 
   .right-text h1 p {
@@ -409,4 +404,5 @@ br {
     left: 81px;
     top: -18px;
   }
+}
 }
