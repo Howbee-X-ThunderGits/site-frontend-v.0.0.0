@@ -66,6 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         document.getElementById('auth-switch-link').addEventListener('click', function (event) {
             event.preventDefault();
+            
             showSignupForm();
         });
 

@@ -188,8 +188,8 @@
       </div>
     </section>
   </section>
-  <section id="statsSection">
-    <div class="container">
+  <div class="statsSection">
+    <div class="statsContainer">
       <h2><span class="bee">HowBee</span> for new learnings</h2>
       <div class="columns">
           <div class="column1">
@@ -205,7 +205,7 @@
           <div class="column2">
               <img src="./assets/statsImgs/column2.png" alt="Column2" class="column2img">
               <img src="./assets/statsImgs/hex2.png" alt="Hexagon2" class="hex2">
-              <div class="hex2-text">4X%</div>
+              <div class="hex2-text">4X</div>
               <div class="arrow2">
                   <img src="./assets/statsImgs/arrow2.svg" alt="Arrow2" class="arr2">
               </div>
@@ -258,149 +258,145 @@
       </div>
 
   </div>
-
-  </section>
+</div>
   <section id="video-frame">
     <video id="intro-video2" loop src="./assets/videos/Untitled design (4).mp4" autoplay muted ></video>
   </section>
-  <section id="loginSignupsection">
-    <div class="auth-container">
-      <div class="auth-text-container">
-        <div class="para">
-          <p>Let the adventure begin</p>
-        </div>
-        <div class="left-content">
-          <div class="auth_dive_into_the_hive">
-            <h1 style="color: #ffe815">Dive</h1>
-            
-            <h1>into</h1> 
-            <h1>the</h1>
-            
-            <h1 style="color: #ffe815">Hive</h1>
-          </div>
+  <div class="auth-container">
+    <div class="auth-text-container">
+      <div class="para">
+        <p>Let the adventure begin</p>
+      </div>
+      <div class="left-content">
+        <div class="auth_dive_into_the_hive">
+          <h1 style="color: #ffe815">Dive</h1>
+          
+          <h1>into</h1> 
+          <h1>the</h1>
+          
+          <h1 style="color: #ffe815">Hive</h1>
         </div>
       </div>
-      <div class="auth-form-wrapper">
-        <div class="auth-form-container">
-          <div class="auth-form-header">
-            <div class="auth-form-header-option" id="signup-tab">
-              Sign Up Now
+    </div>
+    <div class="auth-form-wrapper">
+      <div class="auth-form-container">
+        <div class="auth-form-header">
+          <div class="auth-form-header-option" id="signup-tab">
+            Sign Up Now
+          </div>
+          <div class="auth-form-header-option" id="login-tab">Login</div>
+        </div>
+        <div class="auth-form-body" id="auth-form-body">
+          <form id="signup-form" action="#">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required />
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+            <label for="password">Password</label>
+            <div class="password-wrapper">
+              <i class="fas fa-eye" id="toggle-password"></i>
+              <input type="password" id="password" name="password" required />
             </div>
-            <div class="auth-form-header-option" id="login-tab">Login</div>
-          </div>
-          <div class="auth-form-body" id="auth-form-body">
-            <form id="signup-form" action="#">
-              <label for="username">Username</label>
-              <input type="text" id="username" name="username" required />
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required />
-              <label for="password">Password</label>
-              <div class="password-wrapper">
-                <i class="fas fa-eye" id="toggle-password"></i>
-                <input type="password" id="password" name="password" required />
-              </div>
-              <small id="password-instruction">Use 8 digit password</small>
-              <label for="confirm-password">Confirm Password</label>
-              <div class="password-wrapper">
-                <i class="fas fa-eye" id="toggle-confirm-password"></i>
-                <input
-                  type="password"
-                  id="confirm-password"
-                  name="confirm-password"
-                  required
-                />
-              </div>
-              <label for="invite-code">Invite Code</label>
-              <input type="text" id="invite-code" name="invite-code" required />
-              <label class="auth-form-checkbox-label" style="margin: 1rem 0rem">
-                <input type="checkbox" name="terms" required />
-                I agree to the terms and conditions
-              </label>
-              <div class="form-footer">
-                <button type="submit" class="auth-form-submit-btn">
-                  Sign Up
-                </button>
-                <span class="auth-form-switch">
-                  <p>Already have an account? <a href="#">Log In</a></p>
-                </span>
-              </div>
-            </form>
-          </div>
+            <small id="password-instruction">Use 8 digit password</small>
+            <label for="confirm-password">Confirm Password</label>
+            <div class="password-wrapper">
+              <i class="fas fa-eye" id="toggle-confirm-password"></i>
+              <input
+                type="password"
+                id="confirm-password"
+                name="confirm-password"
+                required
+              />
+            </div>
+            <label for="invite-code">Invite Code</label>
+            <input type="text" id="invite-code" name="invite-code" required />
+            <label class="auth-form-checkbox-label" style="margin: 1rem 0rem">
+              <input type="checkbox" name="terms" required />
+              I agree to the terms and conditions
+            </label>
+            <div class="form-footer">
+              <button type="submit" class="auth-form-submit-btn">
+                Sign Up
+              </button>
+              <span class="auth-form-switch">
+                <p>Already have an account? <a href="#">Log In</a></p>
+              </span>
+            </div>
+          </form>
+
         </div>
       </div>
-      <img src="./assets/signup imgs/cloud1.png" class="cloud cloud1" />
-      <img src="./assets/signup imgs/cloud2.png " class="cloud cloud2" />
+    </div>
+    <img src="./assets/signup imgs/cloud1.png" class="cloud cloud1" />
+    <img src="./assets/signup imgs/cloud2.png " class="cloud cloud2" />
+  </div>
+
+  <section id="Contact-us-container">
+  <div class="container">
+    <div class="top-content">
+      <div class="top-content-heading">
+        How <span>Bee</span>
+        <p class="top-content-heading-p">Bee come one of us</p>
+      </div>
+         
+        
+      <p class="right-text-contact-us">Discover Your Potential</p>
+    </div>
+    <hr />
+    <div class="upside-text">
+      <div class="right-upside">
+        <h1 class="float">
+          "float like a butterfly, <br/>
+          sting like a <span class="bee">Bee</span>"
+          <span class="ali">-Ali</span>
+        </h1>
+      </div>
+      <div class="left-upside">
+        <h1 class="connect">Connect More with HowBee</h1>
+      </div>
     </div>
 
-  </section>
-  <section id="Contact_us">
-    <div class="container">
-      <div class="top-content">
-        <div class="right-text">
-          <h1>
-            How <span>Bee</span>
-            <p>Bee come one of us</p>
-          </h1>
-        </div>
-        <div class="left-text">
-          <p>Discover Your Potential</p>
+    <div class="middle-part">
+      <div class="imgs">
+        <div class="img-right">
+          <hr class="vertical-hr" />
+          <img src="./assets/Contact-us/bee.png" alt="bee" />
         </div>
       </div>
-      <hr />
-
-      <div class="upside-text">
-        <div class="right-upside">
-          <h1 class="float">
-            float like a butterfly, <br />
-            sting like a <span class="bee">Bee</span>"
-            <span class="ali">-Ali</span>
-          </h1>
-        </div>
-        <div class="left-upside">
-          <h1 class="connect">Connect More with HowBee</h1>
-        </div>
-      </div>
-
-      <div class="middle-part">
-        <div class="imgs">
-          <div class="img-right">
-            <hr class="vertical-hr" />
-            <img src="./assets/Contact-us/bee.png" alt="bee" />
+      <div class="text-right">
+        <div class="form-container">
+          <div >
+            <h1 class="text-under-form-container">Reach <span>out for invite</span></h1>
           </div>
-        </div>
-        <div class="text-right">
-          <h1>Reach <span>out for invite</span></h1>
-          <div class="form-container">
-            <form>
-              <div class="form">
-                <input type="text" placeholder="NAME :" />
-              </div>
-              <div class="form">
-                <input type="number" placeholder="PHONE N0. :" />
-              </div>
-              <div class="form">
-                <input type="email" placeholder="EMAIL :" />
-              </div>
-              <div class="form">
-                <input type="text" placeholder="DESCRIPTION :" />
-              </div>
-              <div class="btn">
-                <button type="submit">Submit</button>
-              </div>
-            </form>
-
-            <div class="so-icons">
-              <a href="/"><i class="fa-regular fa-envelope"></i></a>
-              <a href="/"><i class="fa-brands fa-linkedin"></i></a>
-              <a href="/"><i class="fa-brands fa-instagram"></i></a>
-              <a href="/"><i class="fa-solid fa-phone"></i></a>
+          <form>
+            <div class="form">
+              <input type="text" placeholder="NAME :" />
             </div>
+            <div class="form">
+              <input type="number" placeholder="PHONE N0. :" />
+            </div>
+            <div class="form">
+              <input type="email" placeholder="EMAIL :" />
+            </div>
+            <div class="form">
+              <input type="text" placeholder="DESCRIPTION :" />
+            </div>
+            <div class="btn">
+              <button type="submit">Submit</button>
+            </div>
+          </form>
+
+          <div class="so-icons">
+            <a href="/"><i class="fa-regular fa-envelope"></i></a>
+            <a href="/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="/"><i class="fa-solid fa-phone"></i></a>
           </div>
         </div>
       </div>
     </div>
-
-  </section>
+  </div>
+</section>
   <script src="./js/login.js"></script>
     <script src="./js/parallax.js"></script>
   </body>

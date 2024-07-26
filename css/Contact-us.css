@@ -1,53 +1,61 @@
-/* #Contact_us{
-  position: relative;
-  overflow: hidden; */
-  .container {
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fasthand&family=Felipa&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+  /* height: 100vh; */
+
+.container{
   width: 100vw;
-  height: 100vh;
+
+  position: relative;
   overflow: hidden;
-}
+  height: 100%;
+  padding: 20px;
 
+}
 .top-content {
+  height: fit-content;
+  width: 100%;
+
   display: flex;
-  flex-wrap: wrap;
-  padding: 10px 50px 10px 10px;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
 }
 
-.right-text h1 {
+.top-content .top-content-heading {
   font-family: "DM Sans", sans-serif;
   font-weight: 700;
   font-size: 70px;
-  margin-bottom: -20px;
+  width: fit-content;
 }
 
-.right-text h1 span {
+ .top-content  span {
   color: #ffdc2e;
-}
+} 
 
-.right-text h1 p {
-  /* position: absolute; */
+.top-content  .top-content-heading-p {
+  font-family: "Fasthand", sans-serif;
+  font-size: 30px;
+  position: absolute;
+  font-weight: 200;
+  left: 167px;
+  top: 66px;
+} 
+.top-content  .right-text-contact-us{
   font-family: "Fasthand", sans-serif;
   font-size: 30px;
   font-weight: 200;
-  left: 167px;
-  top: 46px;
+
 }
 
-.left-text p {
-  position: relative;
-  font-family: "Fasthand", sans-serif;
-  font-size: 27px;
-  top: 80px;
-}
 
-hr {
-  position: relative;
-  top: 40px;
-  margin: 29px 0 29px 0;
-  width: 100%;
-}
+
 
 .vertical-hr {
   transform: rotate(90deg);
@@ -57,31 +65,31 @@ hr {
 
 .upside-text {
   display: flex;
+  font-size: 30px;
+  width: 100%;
   flex-wrap: wrap;
-
+  font-weight: 700;
   justify-content: space-between;
   align-items: center;
-  margin: 50px 29px 30px 36px;
+  padding:30px ;
 }
 
 .right-upside {
-  width: 45%;
+
+  width: fit-content;
 }
 
 .float {
   position: relative;
-  font-family: "Felipa", sans-serif;
+  font-family: "Felipa", serif;
   font-size: 30px;
-  font-weight: 200;
-  display: inline;
+  font-weight: 500;
   line-height: 1;
+  padding-left: 30px;
   z-index: 20;
 }
 
-br {
-  position: relative;
-  top: -20px;
-}
+
 
 .bee {
   position: relative;
@@ -89,8 +97,7 @@ br {
   font-size: 60px;
   display: inline;
   font-family: "DM Sans", sans-serif;
-  font-weight: 300;
-  top: 20px;
+  font-weight: 500;
   z-index: 10;
 }
 
@@ -105,17 +112,17 @@ br {
 .ali {
   position: relative;
   top: 40px;
+  font-family: "Felipa", serif;
+
   font-size: 2rem;
   z-index: 10;
 }
 
 .middle-part {
   display: flex;
-  flex-wrap: wrap;
   gap: 20px;
   justify-content: space-between;
   margin: 0px;
-  position: absolute;
   width: 100%;
 }
 
@@ -136,50 +143,49 @@ br {
   margin-top: 0;
   left: 181px;
   top: -100px;
-  animation: imgMove 2s ease-out forwards;
   z-index: 100;
 }
 
-@keyframes imgMove {
-  from {
-    transform: translate(-200px, 200px);
-    opacity: 0;
-  }
-  to {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
+.container:hover .img-right img {
+  animation: imgMove 2s ease-out forwards;
 }
+
 
 .text-right {
-  position: relative;
-  top: -50px;
-
-  width: 500px;
-}
-
-.text-right h1 {
-  width: 94%;
-  font-family: "Fasthand", sans-serif;
-  color: #ff9315;
-  font-size: 50px;
-}
-
-.text-right h1 span {
-  color: #000000;
-  font-weight: 200;
+  width: 50%;
 }
 
 .form-container {
-  margin-right: 10rem;
+  position: relative;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
+.text-under-form-container{
+  width: fit-content;
+}
+
+.text-under-form-container  {
+  font-family: "Fasthand", sans-serif;
+  color: #ff9315;
+  font-size: 70px;
+  text-align: start;
+}
+
+.text-right .form-container .text-under-form-container  span {
+  color: #000000;
+  font-family: "Felipa", serif;
+  font-weight: 200;
+}
+
+
 .form {
-  margin-top: 20px;
-  margin-left: 50px;
+  
+  width: 100%;
+  height: auto;
 }
 
 .form input {
@@ -240,15 +246,15 @@ br {
   .img-right {
     width: 10px;
   }
-
-  .right-text .float {
-    font-size: 3.5em;
-    font-family: "Fasthand",cursive;
-
-
+  .text-right {
+    width: 100%;
   }
 
-  .right-text h1 p {
+  .right-text-contact-us h1 {
+    font-size: 3.5em;
+  }
+
+  .right-text-contact-us h1 p {
     right: 0px;
     top: 37px;
   }
@@ -282,7 +288,6 @@ br {
 
   .form-container {
     font-size: 20px;
-    margin-left: 100px;
   }
 
   .img-right img {
@@ -297,8 +302,8 @@ br {
   }
 
   .img-right {
-    background-size: 35rem; /* Adjust size for tablets */
-    top: 0; /* Adjust position if necessary */
+    background-size: 35rem; /* Adjust size for tablets*/ 
+    top: 0; 
   }
 
   .top-content {
@@ -312,7 +317,7 @@ br {
   }
 
   .text-right {
-    left: -84px;
+    /* left: -84px; */
   }
 
   .container .middle-part {
@@ -331,9 +336,11 @@ br {
 
 @media (max-width: 1200px) {
   .img-right {
-    background-size: 45rem; /* Adjust size for medium screens */
+    background-size: 45rem;
   }
-
+  .text-right {
+    width: 100%;
+  }
   .imgs {
     top: -62px;
   }
@@ -352,9 +359,7 @@ br {
     margin-left: 29px;
   }
 
-  .form-container {
-    margin-left: 54px;
-  }
+
 
   .connect {
     top: -33px;
@@ -368,6 +373,9 @@ br {
     align-items: center;
     margin-top: 5%;
   }
+  .text-right {
+    width: 100%;
+  }
 
   .imgs {
     width: 66%;
@@ -378,15 +386,21 @@ br {
   .imgs {
     width: 65%;
   }
+  .text-right {
+    width: 100%;
+  }
 }
 
 @media (max-width: 576px) {
   .img-right {
-    background-size: 25rem; /* Adjust size for mobile devices */
-    top: 0; /* Adjust position if necessary */
+    background-size: 25rem; 
+    top: 0; 
   }
   .container .middle-part {
     margin-top: 15%;
+  }
+  .text-right {
+    width: 100%;
   }
 
   .imgs .img-right img {
@@ -399,9 +413,23 @@ br {
   .container .middle-part {
     margin-top: 20%;
   }
+  .text-right {
+    width: 100%;
+  }
 
   .imgs .img-right img {
     left: 81px;
     top: -18px;
+  } 
+}
+
+@keyframes imgMove {
+  from {
+    transform: translate(-200px, 200px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
   }
 }
