@@ -35,6 +35,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
             </form>
         `;
+        signupTab.style.background='yellow'
+        loginTab.style.background='white'
+
+        
 
         document.getElementById('auth-switch-link').addEventListener('click', function (event) {
             event.preventDefault();
@@ -63,10 +67,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
             </form>
         `;
-
+signupTab.style.background='white'
+        loginTab.style.background='yellow'
         document.getElementById('auth-switch-link').addEventListener('click', function (event) {
             event.preventDefault();
-            
+
             showSignupForm();
         });
 

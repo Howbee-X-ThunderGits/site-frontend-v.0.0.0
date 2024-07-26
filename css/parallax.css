@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fasthand&family=Felipa&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -132,6 +135,7 @@ body {
     z-index: 100;
   }
   p {
+    font-family: 'litrate',serif;
     font-size: 32px;
     color: white;
     width: 70%;

@@ -92,8 +92,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid black;
   padding: 15px 15px;
-  background-color: #ffe815;
+  background-color: #fff;
 }
 
 .auth-form-body {
@@ -254,6 +255,10 @@
 .cloud2 {
   animation: moveCloud2 23s ease-in-out forwards infinite;
   
+}
+
+.active-tab{
+  background-color: red;
 }
 
 @media screen and (max-width: 1024px) {
