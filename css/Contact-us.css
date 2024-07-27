@@ -332,6 +332,12 @@ body {
   .imgs .img-right img {
     left: 140px;
   }
+  .statsContainer h2{
+    font-size: 24px;
+  }
+  .bee{
+    font-size: 24px;
+  }
 }
 
 @media (max-width: 1200px) {

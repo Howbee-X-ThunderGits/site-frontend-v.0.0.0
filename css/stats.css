@@ -59,6 +59,8 @@ body {
     width: 30%;
     bottom: 12%;
     left: 0;
+    object-fit: cover;
+    z-index: 1000;
 }
 
 .column1img {
@@ -122,6 +124,7 @@ body {
     width: 30%;
     bottom: 0;
     left: 34%;
+    z-index: 40;
 }
 
 .column2img {
@@ -183,9 +186,10 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     height: 75vh;
-    width: 30%;
+    width: 15%;
     bottom: 12%;
     right: 4%;
+    z-index: 10;
 }
 
 .column3img {
@@ -964,6 +968,7 @@ h1 {
   @keyframes pulse {
     0% {
       transform: scale(1);
+      
     }
     50% {
       transform: scale(1.2);
@@ -986,9 +991,11 @@ h1 {
     0% {
       transform: scaleY(0);
       transform-origin: bottom;
+      width: 0px;
     }
     100% {
       transform: scaleY(1);
+      width: 27%;
     }
   }
   
