@@ -202,7 +202,7 @@
 .info-section__img {
   opacity: 0; /* Start hidden */
   transform: translate(-200px, 200px);
-  transition: opacity 3s ease, transform 3s ease; /* Smooth transition */
+  transition: opacity 2s ease, transform 2s ease; /* Smooth transition */
 }
 
 .animate {
