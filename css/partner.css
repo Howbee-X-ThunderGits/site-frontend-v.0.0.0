@@ -36,7 +36,7 @@
   animation: 20s slide infinite linear;
   perspective: 100px;
 }
-img:hover{
+#partner img:hover{
   transform: scale(1.2);
 }
 .logos-slide img{

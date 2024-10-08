@@ -28,6 +28,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <link rel="stylesheet" href="./css/media-query.css" />
   </head>
   <body>
     <div id="video-container">
@@ -418,73 +419,108 @@
       <img src="./assets/signup imgs/cloud2.png " class="cloud cloud2" />
     </div>
 
-    <section id="Contact-us-container">
-      <div class="container">
-        <div class="top-content">
-          <div class="top-content-heading">
-            How <span>Bee</span>
-            <p class="top-content-heading-p">Bee come one of us</p>
+    <section id="info-section">
+      <div class="info-section__container">
+        <div class="info-section__header">
+          <div class="info-section__title">
+            How
+            <div class="info-section__title_2"> <span class="highlighted-text">Bee</span>
+              <p class="info-section__subtitle">Bee come one of us</p></div>
+            
           </div>
-
-          <p class="right-text-contact-us">Discover Your Potential</p>
-        </div>
-        <hr />
-        <div class="upside-text">
-          <div class="right-upside">
-            <h1 class="float">
-              "float like a butterfly, <br />
-              sting like a <span class="bee">Bee</span>"
-              <span class="ali">-Ali</span>
-            </h1>
-          </div>
-          <div class="left-upside">
-            <h1 class="connect">Connect More with HowBee</h1>
-          </div>
+          <p class="info-section__cta-text">Discover Your Potential</p>
         </div>
 
-        <div class="middle-part">
-          <div class="imgs">
-            <div class="img-right">
-              <hr class="vertical-hr" />
-              <img src="./assets/Contact-us/bee.png" alt="bee" />
+        <hr class="info-section__divider" />
+
+        <div class="info-section__content">
+          <div class="info-section__quote-wrapper">
+            <div class="info-section__quote">
+              <div>"float like a butterfly,</div>  
+              <div style="display: flex;align-items: flex-end;">
+                <div style="display: flex">sting like a <p class="highlighted-text">Bee</p>"</div>
+                <div class="quote-author">-Ali</div>
+              </div>
+              
+              
+              
             </div>
           </div>
-          <div class="text-right">
-            <div class="form-container">
-              <div>
-                <h1 class="text-under-form-container">
-                  Reach <span>out for invite</span>
-                </h1>
-              </div>
-              <form>
-                <div class="form">
-                  <input type="text" placeholder="NAME :" />
-                </div>
-                <div class="form">
-                  <input type="number" placeholder="PHONE N0. :" />
-                </div>
-                <div class="form">
-                  <input type="email" placeholder="EMAIL :" />
-                </div>
-                <div class="form">
-                  <input type="text" placeholder="DESCRIPTION :" />
-                </div>
-                <div class="btn">
-                  <button type="submit">Submit</button>
-                </div>
-              </form>
+          <div class="info-section__tagline">
+            <h1 class="info-section__connect-text">Connect More with HowBee</h1>
+          </div>
+        </div>
 
-              <div class="so-icons">
-                <a href="/"><i class="fa-regular fa-envelope"></i></a>
-                <a href="/"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="/"><i class="fa-brands fa-instagram"></i></a>
-                <a href="/"><i class="fa-solid fa-phone"></i></a>
+        <div class="info-section__main">
+          <div class="info-section__image-wrapper">
+            <div class="info-section__image">
+              
+              <img
+                src="./assets/Contact-us/bee.png"
+                alt="bee"
+                class="info-section__img"
+              />
+            </div>
+          </div>
+          <div class="info-section__form-wrapper">
+            <div class="info-section__form-header">
+              
+                Reach <span style="color:black">out for invite</span>
+              
+            </div>
+            <form class="info-section__form">
+              <div class="info-section__form-field">
+                <input
+                  type="text"
+                  placeholder="NAME :"
+                  class="info-section__input"
+                />
               </div>
+              <div class="info-section__form-field">
+                <input
+                  type="number"
+                  placeholder="PHONE N0. :"
+                  class="info-section__input"
+                />
+              </div>
+              <div class="info-section__form-field">
+                <input
+                  type="email"
+                  placeholder="EMAIL :"
+                  class="info-section__input"
+                />
+              </div>
+              <div class="info-section__form-field">
+                <input
+                  type="text"
+                  placeholder="DESCRIPTION :"
+                  class="info-section__input"
+                />
+              </div>
+              <div class="info-section__submit-button">
+                <button type="submit" class="btn">Submit</button>
+              </div>
+            </form>
+            <div class="info-section__social-icons">
+              <a href="/" class="info-section__social-icon"
+                ><i class="fa-regular fa-envelope"></i
+              ></a>
+              <a href="/" class="info-section__social-icon"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a href="/" class="info-section__social-icon"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="/" class="info-section__social-icon"
+                ><i class="fa-solid fa-phone"></i
+              ></a>
             </div>
           </div>
         </div>
       </div>
+      <div class="info-section__vertical_line"></div>
     </section>
+
     <script>
       function adjustParallaxHeight() {
         const parallaxSection = document.querySelector(".Parallex");
@@ -554,8 +590,6 @@
             column4.classList.add("zoom-in"); // Add the zoom-in class
             window.removeEventListener("scroll", checkScroll); // Remove event listener after animation triggers
           }
-
-       
         }
       }
 
@@ -568,5 +602,6 @@
 
     <script src="./js/login.js"></script>
     <script src="./js/parallax.js"></script>
+    <script src="./js/info.js"></script>
   </body>
 </html>
