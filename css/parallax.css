@@ -1,31 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fasthand&family=Felipa&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap");
+@import url("./media-query.css");
+/* Parallax Theme CSS Variables */
+:root {
+  /* Colors */
+  --parallax-main-color-black: #000000;
+  --parallax-main-color-white: #ffffff;
+  --parallax-highlight-color-yellow: #ffdc2e;
+  --parallax-main-color-light-blue: #94ccff;
+  --parallax-main-color-pale-blue: #d5f5ff;
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fasthand&family=Felipa&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap');
+  /* Fonts */
+  --parallax-main-font-primary: "DM Sans", sans-serif;
+  --parallax-main-font-cursive: "Fasthand", cursive;
+  --parallax-main-font-serif: "Literata", serif;
 
+  /* Font Sizes */
+  --parallax-font-size-h1-large: 5.625rem; /* 90px */
+  --parallax-font-size-h1-medium: 3rem; /* 48px */
+  --parallax-font-size-h1-small: 2rem; /* 32px */
+  --parallax-font-size-p-large: 2.8125rem; /* 45px */
+  --parallax-font-size-p-medium: 2.25rem; /* 36px */
+  --parallax-font-size-p-small: 1.5rem; /* 24px */
+  --parallax-font-size-p-mini: 1rem; /* 16px */
+  --parallax-font-size-span-large: 5.625rem; /* 90px */
+  --parallax-font-size-span-medium: 3rem; /* 48px */
+  --parallax-font-size-span-small: 2rem; /* 32px */
+  --parallax-font-size-span-mini: 1rem; /* 16px */
+
+  /* Spacing */
+  --parallax-padding-small: 0.3125rem; /* 5px */
+  --parallax-padding-medium: 0.625rem; /* 10px */
+  --parallax-padding-large: 1.25rem; /* 20px */
+  --parallax-padding-extra-large: 3.125rem; /* 50px */
+
+  --parallax-gap-large: 3.125rem; /* 50px */
+
+  /* Transition */
+  --parallax-transition-speed: 0.5s;
+  --parallax-transition-speed-long: 1s;
+  --parallax-transition-ease: ease-in-out;
+
+  /* Dimensions */
+  --parallax-width-full: 100vw;
+  --parallax-height-full: 100vh;
+  --parallax-height-mountain: 32.5rem; /* 520px */
+  --parallax-width-sun: 6.25rem; /* 100px */
+  --parallax-height-sun: 6.25rem; /* 100px */
+
+  /* Z-Index */
+  --parallax-z-index-high: 100;
+  --parallax-z-index-medium: 0;
+  --parallax-z-index-low: -10;
+  --parallax-z-index-negative: -100;
+
+  /* Background Images */
+  --parallax-bg-mountain1: url("../assets/parallax/mountain1.png");
+  --parallax-bg-mountain2: url("../assets/parallax/mountain2.png");
+}
+
+/* Apply CSS Variables to the styles */
 * {
   margin: 0;
   padding: 0;
-  font-family: "DM Sans", sans-serif;
+  font-family: var(--parallax-main-font-primary);
 }
-
 body {
   position: relative;
 }
-.Parallex {
-
-  width: 100vw;
-  height: 100vh;
-
-  overflow-y: scroll;
-  overflow-x: hidden;
-  transition: all ease-in-out 1s;
+hr {
+  color: black;
+  background-color: black;
+  border: 1px solid black;
 }
 
-.section1,
-.section2 {
-
+#scroll-capture-section {
+  height: 100vh;
   width: 100vw;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(to bottom, #69a8db 26%, #ffc986 72%);
+  transition: background 0.5s ease-out;
+}
+
+/* .parallax {
+  width: 100vw;
+  background: linear-gradient(to bottom, #69A8DB, #FFC986);
+} */
+/* background: linear-gradient(to bottom, #91c9f7, #f9c39b); */
+
+.parallax__section--primary {
+  height: 100vh;
+  position: relative;
+  z-index: 5;
+}
+.parallax__section--secondary {
   height: 100vh;
 }
+
+.parallax__header {
+  display: flex;
+  position: relative;
+  width: fit-content;
+  z-index: 5;
+}
+
+.parallax_header_shell {
+  border-bottom: 2px solid black;
+  z-index: 5;
+  position: relative;
+}
+
+.parallax__header > div {
+  font-size: var(--parallax-font-size-h1-large);
+  font-weight: bold;
+}
+.parallax__highlight {
+  color: var(--parallax-highlight-color-yellow);
+}
+.parallax__subtitle {
+  font-size: var(--parallax-font-size-span-small);
+  font-weight: var(--font-weight-light);
+  font-family: var(--parallax-main-font-cursive);
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+.parallax__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 5px;
+  position: relative;
+  z-index: 5;
+}
+
+.parallax__message {
+  font-size: var(--parallax-font-size-p-medium);
+  font-weight: bold;
+
+}
+
+.parallax__sub-message {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--parallax-font-size-p-small);
+  font-family: var(--parallax-main-font-cursive);
+}
+
+.parallax__sub-message p {
+  font-size: var(--parallax-font-size-p-medium);
+  font-family: var(--parallax-main-font-cursive);
+}
+
+.parallax__content-alt {
+  text-align: right;
+}
+
+.parallax__bottom-text {
+  margin: auto;
+  width: 60%;
+}
+
+.parallax__description {
+  margin-left: 2rem;
+  color: #ffffff;
+}
+
+.parallax__bottom-text > div {
+  font-size: var(--parallax-font-size-p-large);
+}
+
+.parallax_sun {
+  position: absolute;
+  top: 1rem;
+}
+
+.parallax_sun,
+.parallax__message,
+.parallax__sub-message,
+.parallax__bird-container .parallax_submsg_1 .parallax_submsg_2 {
+  transition: transform 0.5s ease-out;
+  will-change: transform;
+}
+
+#scroll-capture-section {
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Prevent internal scroll */
+  position: relative;
+}
+
+.mount-frame-1{
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+  height: 85vh;
+  width: 100%;
+}
+
+.ground-left{
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  transition: left 0.5s ease;
+}
+.ground-right{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  transition: right 0.5s ease;
+}
+
+/* Add this CSS to handle the fade effect */
+.mount-frame-1 {
+  transition: opacity 0.5s ease; /* Adjust duration as needed */
+  opacity: 1; /* Ensure the image is visible by default */
+}
+.hidden {
+  opacity: 0; /* This class will be used to hide the image */
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .section1 .upper-text {
   width: auto;
   position: relative;
@@ -50,7 +256,7 @@ body {
 .section1 .middle-text {
   padding-left: 8px;
   border-bottom: 2px solid black;
-  
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -139,7 +345,7 @@ body {
     z-index: 100;
   }
   p {
-    font-family: 'litrate',serif;
+    font-family: "litrate", serif;
     font-size: 32px;
     color: white;
     width: 70%;
@@ -151,8 +357,8 @@ body {
 
 @media only screen and (max-width: 768px) {
   .section2 .bottom-text-container h1,
-.section2  .bottom-text-container span,
-.section2  .bottom-text-container p {
+  .section2 .bottom-text-container span,
+  .section2 .bottom-text-container p {
     padding-left: 10px;
     font-size: 32px;
   }
@@ -181,7 +387,7 @@ body {
 
 .theme {
   background-attachment: fixed;
-  background:  linear-gradient(to bottom, #94ccff, #d5f5ff);
+  background: linear-gradient(to bottom, #94ccff, #d5f5ff);
   background-size: 100vh 100vw;
   height: 100vh;
   z-index: -10;
@@ -211,45 +417,37 @@ body {
 
   width: 100%;
   height: auto;
-  
+
   background-size: 100% 100%;
 }
-.theme .bottom-stone1 img{
+.theme .bottom-stone1 img {
   width: 100%;
 }
 .theme .bottom-stone2 {
-    position: absolute;
-    bottom: 0;
-  
-    width: 100%;
-  
-  
-  
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
 }
-.theme .bottom-stone2 img{
+.theme .bottom-stone2 img {
   width: 100%;
 }
 
 .theme .mountain-Container2 {
-    position: absolute;
-    bottom: 0;
-    z-index: 0;
-  
-    width: 100%;
-    height: 520px;
-    z-index: -100;
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+
+  width: 100%;
+  height: 520px;
+  z-index: -100;
   background: url("../assets//parallax/mountain2.png") no-repeat center bottom;
   background-size: 100% 100%;
   transition: transform 0.5s ease;
 }
 
 .bird-container {
-  
-
-
- padding: 50px 0px;
-
-
+  padding: 50px 0px;
 }
 .theme .sun {
   height: 100px;
