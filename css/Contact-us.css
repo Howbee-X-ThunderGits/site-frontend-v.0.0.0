@@ -56,7 +56,7 @@
   font-size: 8rem;
   font-weight: var(--font-weight-bold);
   font-family: var(--font-dm-sans);
-  padding: 1rem;
+  padding:0 1rem;
 }
 
 .info-section__subtitle {
@@ -82,6 +82,7 @@
   font-family: var(--font-fasthand);
   width: 100%;
   text-align: right;
+  width: fit-content;
 }
 
 .info-section__quote div {
@@ -90,7 +91,7 @@
   font-weight: var(--font-weight-light);
 }
 .info-section__quote {
-  padding: 2rem 1rem;
+  padding: 0rem 1rem;
 }
 
 .info-section__quote .highlighted-text {
@@ -113,9 +114,11 @@
   font-family: var(--font-fasthand);
   width: 100%;
   text-align: right;
+  width: fit-content;
+  float: right;
 }
 .info-section__tagline {
-  width: 100%;
+  width: fit-content;
   text-align: right;
 }
 .quote-author {
