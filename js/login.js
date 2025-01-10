@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-    
-    
+
+
     const signupTab = document.getElementById('signup-tab');
     const loginTab = document.getElementById('login-tab');
     const authFormBody = document.getElementById('auth-form-body');
@@ -37,15 +37,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
             </form>
         `;
-        signupTab.style.background='yellow'
-        loginTab.style.background='white'
-
-        
-
+        signupTab.style.background = 'yellow'
+        loginTab.style.background = 'white'
         document.getElementById('auth-switch-link').addEventListener('click', function (event) {
             event.preventDefault();
             showLoginForm();
         });
+         document.getElementById("auth-header").innerHTML=`<span style="color: #ff9315; font-family: inherit">Bee</span
+              > Confident`
+        document.getElementById("auth-text").innerHTML = `Begin this wonderful <br/>
+            journey with us!`
 
         togglePasswordVisibility('password', 'toggle-password');
         togglePasswordVisibility('confirm-password', 'toggle-confirm-password');
@@ -69,14 +70,17 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
             </form>
         `;
-signupTab.style.background='white'
-        loginTab.style.background='yellow'
+        signupTab.style.background = 'white'
+        loginTab.style.background = 'yellow'
         document.getElementById('auth-switch-link').addEventListener('click', function (event) {
             event.preventDefault();
 
             showSignupForm();
         });
-
+        document.getElementById("auth-header").innerHTML=`<span style="color: #ff9315; font-family: inherit">Bee</span
+              > Consistent`
+        document.getElementById("auth-text").innerHTML = `Pick up right where you <br/>
+            left off!`
         togglePasswordVisibility('password', 'toggle-password');
     }
 

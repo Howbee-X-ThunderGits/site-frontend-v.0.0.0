@@ -1,72 +1,49 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fasthand&family=Felipa&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap");
 @import url("./media-query.css");
-/* Parallax Theme CSS Variables */
-:root {
-  /* Colors */
-  --parallax-main-color-black: #000000;
-  --parallax-main-color-white: #ffffff;
-  --parallax-highlight-color-yellow: #ffdc2e;
-  --parallax-main-color-light-blue: #94ccff;
-  --parallax-main-color-pale-blue: #d5f5ff;
+@import url("https://fonts.googleapis.com/css2?family=Gotu&display=swap");
 
-  /* Fonts */
-  --parallax-main-font-primary: "DM Sans", sans-serif;
-  --parallax-main-font-cursive: "Fasthand", cursive;
-  --parallax-main-font-serif: "Literata", serif;
-
-  /* Font Sizes */
-  --parallax-font-size-h1-large: 5.625rem; /* 90px */
-  --parallax-font-size-h1-medium: 3rem; /* 48px */
-  --parallax-font-size-h1-small: 2rem; /* 32px */
-  --parallax-font-size-p-large: 2.8125rem; /* 45px */
-  --parallax-font-size-p-medium: 2.25rem; /* 36px */
-  --parallax-font-size-p-small: 1.5rem; /* 24px */
-  --parallax-font-size-p-mini: 1rem; /* 16px */
-  --parallax-font-size-span-large: 5.625rem; /* 90px */
-  --parallax-font-size-span-medium: 3rem; /* 48px */
-  --parallax-font-size-span-small: 2rem; /* 32px */
-  --parallax-font-size-span-mini: 1rem; /* 16px */
-
-  /* Spacing */
-  --parallax-padding-small: 0.3125rem; /* 5px */
-  --parallax-padding-medium: 0.625rem; /* 10px */
-  --parallax-padding-large: 1.25rem; /* 20px */
-  --parallax-padding-extra-large: 3.125rem; /* 50px */
-
-  --parallax-gap-large: 3.125rem; /* 50px */
-
-  /* Transition */
-  --parallax-transition-speed: 0.5s;
-  --parallax-transition-speed-long: 1s;
-  --parallax-transition-ease: ease-in-out;
-
-  /* Dimensions */
-  --parallax-width-full: 100vw;
-  --parallax-height-full: 100vh;
-  --parallax-height-mountain: 32.5rem; /* 520px */
-  --parallax-width-sun: 6.25rem; /* 100px */
-  --parallax-height-sun: 6.25rem; /* 100px */
-
-  /* Z-Index */
-  --parallax-z-index-high: 100;
-  --parallax-z-index-medium: 0;
-  --parallax-z-index-low: -10;
-  --parallax-z-index-negative: -100;
-
-  /* Background Images */
-  --parallax-bg-mountain1: url("../assets/parallax/mountain1.png");
-  --parallax-bg-mountain2: url("../assets/parallax/mountain2.png");
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../assets/font/helvetica-neue/HelveticaNeueBlack.woff") format("woff");
+  font-weight: 900;
+  /* Black */
+  font-style: normal;
 }
 
-/* Apply CSS Variables to the styles */
-* {
-  margin: 0;
-  padding: 0;
-  font-family: var(--parallax-main-font-primary);
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../assets/font/helvetica-neue/HelveticaNeueMedium.woff") format("woff");
+  font-weight: 500;
+  /* Medium */
+  font-style: normal;
 }
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../assets/font/helvetica-neue/HelveticaNeueLight.woff") format("woff");
+  font-weight: 300;
+  /* Light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../assets/font/helvetica-neue/HelveticaNeueThin.woff") format("woff");
+  font-weight: 100;
+  /* Thin */
+  font-style: normal;
+}
+
+.gotu-regular {
+  font-family: "Gotu", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
   position: relative;
 }
+
 hr {
   color: black;
   background-color: black;
@@ -74,12 +51,16 @@ hr {
 }
 
 #scroll-capture-section {
-  height: 100vh;
+  height: 200vh;
   width: 100vw;
-  overflow: hidden;
+  /* overflow: hidden; */
   position: relative;
-  background: linear-gradient(to bottom, #69a8db 26%, #ffc986 72%);
+  background-color: #ffffff;
   transition: background 0.5s ease-out;
+  text-align: center;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: flex-end; */
 }
 
 /* .parallax {
@@ -88,375 +69,186 @@ hr {
 } */
 /* background: linear-gradient(to bottom, #91c9f7, #f9c39b); */
 
-.parallax__section--primary {
+.parallax-head {
+  font-size: 12rem;
+  font-family: "Gotu", serif;
+  margin-top: 30vh;
+  z-index: 1000;
+  position: relative;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.8s ease-out;
+}
+
+.parallax-para {
+  font-family: "HelveticaNeue", serif;
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  margin: 0rem 5rem;
+  font-weight: 300;
+  /* Light */
+  z-index: 1000;
+  position: relative;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.8s ease-out;
+  margin-bottom: 3rem;
+}
+
+.parallax-box {
   height: 100vh;
-  position: relative;
-  z-index: 5;
-}
-.parallax__section--secondary {
-  height: 100vh;
-}
-
-.parallax__header {
-  display: flex;
-  position: relative;
-  width: fit-content;
-  z-index: 5;
-}
-
-.parallax_header_shell {
-  border-bottom: 2px solid black;
-  z-index: 5;
-  position: relative;
-}
-
-.parallax__header > div {
-  font-size: var(--parallax-font-size-h1-large);
-  font-weight: bold;
-}
-.parallax__highlight {
-  color: var(--parallax-highlight-color-yellow);
-}
-.parallax__subtitle {
-  font-size: var(--parallax-font-size-span-small);
-  font-weight: var(--font-weight-light);
-  font-family: var(--parallax-main-font-cursive);
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-}
-
-.parallax__content {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  padding: 5px;
-  position: relative;
-  z-index: 5;
-}
-
-.parallax__message {
-  font-size: var(--parallax-font-size-p-medium);
-  font-weight: bold;
-
-}
-
-.parallax__sub-message {
-  display: flex;
-  justify-content: space-between;
-  font-size: var(--parallax-font-size-p-small);
-  font-family: var(--parallax-main-font-cursive);
-}
-
-.parallax__sub-message p {
-  font-size: var(--parallax-font-size-p-medium);
-  font-family: var(--parallax-main-font-cursive);
-}
-
-.parallax__content-alt {
-  text-align: right;
-}
-
-.parallax__bottom-text {
-  margin: auto;
-  width: 60%;
-}
-
-.parallax__description {
-  margin-left: 2rem;
-  color: #ffffff;
-}
-
-.parallax__bottom-text > div {
-  font-size: var(--parallax-font-size-p-large);
-}
-
-.parallax_sun {
-  position: absolute;
-  top: 1rem;
-}
-
-.parallax_sun,
-.parallax__message,
-.parallax__sub-message,
-.parallax__bird-container .parallax_submsg_1 .parallax_submsg_2 {
-  transition: transform 0.5s ease-out;
-  will-change: transform;
-}
-
-#scroll-capture-section {
-  height: 100vh; /* Full viewport height */
-  overflow: hidden; /* Prevent internal scroll */
-  position: relative;
-}
-
-.mount-frame-1{
-  position: absolute;
-  bottom: 0;
-  z-index: 0;
-  height: 85vh;
-  width: 100%;
-}
-
-.ground-left{
-  position: absolute;
-  bottom: 0;
-  z-index: 1;
-  transition: left 0.5s ease;
-}
-.ground-right{
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: 1;
-  transition: right 0.5s ease;
-}
-
-/* Add this CSS to handle the fade effect */
-.mount-frame-1 {
-  transition: opacity 0.5s ease; /* Adjust duration as needed */
-  opacity: 1; /* Ensure the image is visible by default */
-}
-.hidden {
-  opacity: 0; /* This class will be used to hide the image */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-.section1 .upper-text {
-  width: auto;
-  position: relative;
-  z-index: 100;
-  padding: 10px 5px;
-  border-bottom: 2px solid black;
-  h1 {
-    font-size: 90px;
-  }
-  span {
-    font-size: 90px;
-    color: #ffdc2e;
-  }
-  p {
-    position: absolute;
-    bottom: -5px;
-    left: 180px;
-    font-size: 45px;
-    font-family: "Fasthand", cursive;
-  }
-}
-.section1 .middle-text {
-  padding-left: 8px;
-  border-bottom: 2px solid black;
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-end;
-  p {
-    font-size: 50px;
-    font-weight: 600;
-    animation: AnimatedText 2s ease forwards;
-  }
-}
-.section1 .next-middle {
-  display: flex;
-  justify-content: space-between;
-  padding-right: 5px;
-
-  p {
-    font-size: 2.5rem;
-    font-family: "Fasthand", cursive;
-    animation: AnimatedText 2s ease forwards;
-  }
-}
-
-@keyframes AnimatedText {
-  0% {
-    opacity: 0;
-    transform: translateY(-100px);
-    transform: translateX(-100px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-    transform: translateX(0px);
-  }
-}
-
-.section2 .upper-text1 {
-  width: auto;
-  position: relative;
-  padding: 10px 5px;
-  border-bottom: 2px solid white;
-  h1 {
-    font-size: 90px;
-    color: #ffdc2e;
-  }
-  span {
-    font-size: 90px;
-    color: black;
-  }
-  p {
-    font-size: 36px;
-    font-family: "Fasthand", cursive;
-  }
-}
-.section2 .middle-text2 {
-  padding-left: 8px;
-  border-bottom: 2px solid white;
-}
-.section2 .next-middle2 {
-  width: 100%;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: space-between;
-  gap: 50px;
-
   justify-content: flex-end;
-
-  p {
-    text-align: end;
-    padding-right: 20px;
-    color: #ffffff;
-    font-size: 36px;
-    font-family: "Fasthand", cursive;
-  }
 }
-.section2 .bottom-text-container {
-  padding-top: 30px;
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  transition: all 1s ease-out;
+}
+
+.circle-1 {
+  width: 20vw;
+  height: 20vw;
+  top: -10vw;
+  /* Move half of its height up */
+  left: 50%;
+  transform: translateX(-50%) translateY(-100vh);
+  background: linear-gradient(to bottom, #ffb55d, #fff4be);
+  z-index: 600;
+}
+
+.circle-2 {
+  width: 40vw;
+  height: 35vw;
+  top: -17.5vw;
+  /* Move half of its height up */
+  left: 50%;
+  transform: translateX(-50%) translateY(-100vh);
+  background: linear-gradient(to bottom, #feac30, #feefac);
+  z-index: 400;
+}
+
+.circle-3 {
+  width: 60vw;
+  height: 50vw;
+  top: -25vw;
+  /* Move half of its height up */
+  left: 50%;
+  transform: translateX(-50%) translateY(-100vh);
+  background: linear-gradient(to bottom, #ffb55d, #fff4be);
+  z-index: 200;
+}
+
+.circle-4 {
+  width: 80vw;
+  height: 65vw;
+  top: -32.5vw;
+  /* Move half of its height up */
+  left: 50%;
+  transform: translateX(-50%) translateY(-100vh);
+  background: linear-gradient(to bottom, #ffffff, #ffed86);
   z-index: 100;
-  h1 {
-    padding-left: 20%;
-    font-size: 48px;
-    z-index: 100;
-  }
-  span {
-    font-size: 48px;
-    color: #ffdc2e;
-    z-index: 100;
-  }
-  p {
-    font-family: "litrate", serif;
-    font-size: 32px;
-    color: white;
-    width: 70%;
-    padding-left: 32%;
-    letter-spacing: 3px;
-    z-index: 100;
-  }
 }
 
-@media only screen and (max-width: 768px) {
-  .section2 .bottom-text-container h1,
-  .section2 .bottom-text-container span,
-  .section2 .bottom-text-container p {
-    padding-left: 10px;
-    font-size: 32px;
-  }
-  .section2 .bottom-text-container p {
-    width: 100%;
-    font-size: 16px;
-    letter-spacing: 1px;
-    padding-bottom: 20px;
-  }
-  .section1 .upper-text {
-    p {
-      font-size: 36px;
-      font-family: "Fasthand", cursive;
-    }
-  }
-  .section2 .next-middle2 {
-    p {
-      text-align: end;
-      padding-right: 20px;
-      color: #ffffff;
-      font-size: 24px;
-      font-family: "Fasthand", cursive;
-    }
-  }
-}
-
-.theme {
-  background-attachment: fixed;
-  background: linear-gradient(to bottom, #94ccff, #d5f5ff);
-  background-size: 100vh 100vw;
-  height: 100vh;
-  z-index: -10;
-  margin-right: 20px;
-  overflow: hidden;
+.circle-5 {
   width: 100vw;
-  position: absolute;
-  top: 0;
-  left: 0;
+  height: 80vw;
+  top: -40vw;
+  /* Move half of its height up */
+  left: 50%;
+  transform: translateX(-50%) translateY(-100vh);
+  background: linear-gradient(to bottom, #ffffff, #ffefa6);
+  z-index: 10;
 }
 
-.theme .mountain-Container1 {
-  position: absolute;
-  bottom: 0;
-  z-index: 0;
-
-  width: 100%;
-  height: 520px;
-  z-index: -100;
-  background: url("../assets/parallax/mountain1.png") no-repeat center bottom;
-  background-size: 100% 100%;
-  transition: transform 0.5s ease;
-}
-.theme .bottom-stone1 {
-  position: absolute;
-  bottom: 0;
-
-  width: 100%;
-  height: auto;
-
-  background-size: 100% 100%;
-}
-.theme .bottom-stone1 img {
-  width: 100%;
-}
-.theme .bottom-stone2 {
-  position: absolute;
-  bottom: 0;
-
-  width: 100%;
-}
-.theme .bottom-stone2 img {
-  width: 100%;
+.active-text {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.theme .mountain-Container2 {
-  position: absolute;
-  bottom: 0;
-  z-index: 0;
-
-  width: 100%;
-  height: 520px;
-  z-index: -100;
-  background: url("../assets//parallax/mountain2.png") no-repeat center bottom;
-  background-size: 100% 100%;
-  transition: transform 0.5s ease;
+.active-circle-1 {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
 
-.bird-container {
-  padding: 50px 0px;
+.active-circle-2 {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
-.theme .sun {
-  height: 100px;
-  width: 100px;
-  position: absolute;
-  border-radius: 100%;
-  background-color: #ffffff;
-  box-shadow: 0 0 10px 10px rgba(255, 255, 255, 1);
-  top: 70px;
-  left: 80px;
-  transition: width 0.5s ease, height 0.5s ease;
+
+.active-circle-3 {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.active-circle-4 {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+.active-circle-5 {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+@media screen and (max-width: 500px) {
+  .parallax-head {
+    font-size: 5rem;
+    margin-top: 0;
+    top: -80px;
+  }
+
+  .parallax-para {
+    font-size: 1.5rem;
+    line-height: 3.5rem;
+    margin: 0rem 5rem;
+    margin-bottom: 3rem;
+    top: -85px;
+  }
+
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+    transition: all 0.8s ease-out;
+  }
+
+  .circle-1 {
+    width: 80vw;
+    height: 80vw;
+    top: -40vw;
+    /* Move half of its height up */
+  }
+
+  .circle-2 {
+    width: 125vw;
+    height: 125vw;
+    top: -62.5vw;
+    /* Move half of its height up */
+  }
+
+  .circle-3 {
+    width: 150vw;
+    height: 150vw;
+    top: -75vw;
+    /* Move half of its height up */
+  }
+
+  .circle-4 {
+    width: 175vw;
+    height: 175vw;
+    top: -85.5vw;
+    /* Move half of its height up */
+  }
+
+  .circle-5 {
+    width: 200vw;
+    height: 200vw;
+    top: -100vw;
+    /* Move half of its height up */
+  }
 }

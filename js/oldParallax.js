@@ -1,3 +1,99 @@
+// let lastScrollTop = 0;
+
+// const mountainContainer = document.querySelector(".mountain-Container1");
+// const bottomStone = document.querySelector(".bottom-stone1");
+// const sun = document.querySelector(".sun");
+// const birds = document.querySelectorAll(".bird");
+// const parallax=document.querySelector(".Parallex")
+// const body = document.querySelector('.theme');
+// // console.log("hii");
+// if (mountainContainer && bottomStone && sun && parallax) {
+//     // console.log("found")
+
+// document.querySelector('.Parallex').addEventListener("scroll", function(){
+// //   console.log("Scroll event triggered");
+//   const scrollTop = parallax.scrollTop;
+//     const parallaxHeight = parallax.offsetHeight;
+// // console.log(scrollTop,parallaxHeight/2)
+
+//   if (scrollTop < parallaxHeight / 2) {
+//     body.style.background = "linear-gradient(to bottom, #94ccff, #d5f5ff)";
+
+//       mountainContainer.classList.remove("mountain-Container2");
+//     mountainContainer.classList.add("mountain-Container1");
+//     bottomStone.classList.remove("bottom-stone2");
+//     bottomStone.classList.add("bottom-stone1");
+//     sun.style.width = "100px";
+//     sun.style.height = "100px";
+//     sun.style.top = "70px";
+//     sun.style.left = "80px";
+//     sun.style.transition = "width 0.5s ease, height 0.5s ease";
+//     birds.forEach((bird) => (bird.style.opacity = "1"));
+
+//   } else {
+//     body.style.background =
+//     "linear-gradient(180deg, #69A8DB -10.3%, #FFC986 34.57%)";
+//     sun.style.width = "0";
+//     sun.style.height = "0";
+//     mountainContainer.classList.remove("mountain-Container1");
+//     mountainContainer.classList.add("mountain-Container2");
+//     bottomStone.classList.remove("bottom-stone1");
+//     bottomStone.classList.add("bottom-stone2");
+//     birds.forEach((bird) => (bird.style.opacity = "0"));
+
+//   }
+//  lastScrollTop = scrollTop;
+
+
+// });
+// }
+// else{
+//     console.log("not working");
+// }
+
+
+
+// document.addEventListener("scroll", () => {
+//   const scrollPosition = window.scrollY;
+
+//   // Define different movement speeds for each element
+//   const sunMovement = scrollPosition * 0.2;
+//   const messageMovement = scrollPosition * 0.4;
+//   const birdsMovement = scrollPosition * 0.5;
+//   const subMsg1Movement = scrollPosition * 0.3;
+//   const subMsg2Movement = scrollPosition * 0.35;
+
+//   // Move the sun element
+//   const sun = document.querySelector(".parallax_sun");
+//   if (sun) {
+//     sun.style.transform = `translateY(${sunMovement}px)`;
+//   }
+
+//   // Move the main parallax message
+//   const parallaxMessage = document.querySelector(".parallax__message");
+//   if (parallaxMessage) {
+//     parallaxMessage.style.transform = `translateY(${messageMovement}px)`;
+//   }
+
+//   // Move the bird images
+//   const birds = document.querySelector(".parallax_bird");
+//   if (birds) {
+//     birds.style.transform = `translateY(${birdsMovement}px)`;
+//   }
+
+//   // Move the first sub-message
+//   const subMsg1 = document.querySelector(".parallax_submsg_1");
+//   if (subMsg1) {
+//     subMsg1.style.transform = `translateY(${subMsg1Movement}px)`;
+//   }
+
+//   // Move the second sub-message
+//   const subMsg2 = document.querySelector(".parallax_submsg_2");
+//   if (subMsg2) {
+//     subMsg2.style.transform = `translateY(${subMsg2Movement}px)`;
+//   }
+// });
+
 let isAnimating = false; // Flag to track if animation is in progress
 let animationProgress = 0; // Track how far into the animation we are (0 to 100)
 let isAnimationComplete = false; // Track if the animation has finished
@@ -11,7 +107,8 @@ const subMsg2 = document.querySelector(".parallax_submsg_2");
 const leftGround = document.querySelector(".ground-left");
 const rightGround = document.querySelector(".ground-right");
 const mountFrame1 = document.querySelector(".mount-frame-1"); // Image element
-const parallaxHeader = document.querySelector(".parallax__header");
+const parallaxHeader = document.querySelector(".parallax__header")
+
 
 // Variables for touch handling
 let startTouchY = 0;
@@ -24,9 +121,9 @@ function handleScrollAnimation(deltaY) {
 
   // Adjust animation progress based on scroll direction
   if (deltaY > 0 && animationProgress < 100) {
-    animationProgress += 5; // Increase progress (scroll down)
+    animationProgress += 5; // Increase progress
   } else if (deltaY < 0 && animationProgress > 0) {
-    animationProgress -= 5; // Decrease progress (scroll up)
+    animationProgress -= 5; // Decrease progress
   }
 
   // Clamp progress to 0-100 range
@@ -79,6 +176,7 @@ function animateElements(progress) {
   document.getElementById("scroll-capture-section").style.background =
     `linear-gradient(to bottom, #69A8DB ${gradientStop1}%, #FFC986 ${gradientStop2}%)`;
   console.log(progress);
+
 
   // Handle the animation and position change of the secondary section
   const secondarySection = document.querySelector(".parallax__section--secondary");
@@ -139,9 +237,9 @@ function resetSpecialAnimation() {
   }, 100); // Duration should match the CSS transition time
 }
 
+
 // Listen for scroll input (desktop)
 window.addEventListener("wheel", (event) => {
-  console.log("Wheeled")
   if (isAnimating) return; // Ignore if animation is in progress
   handleScrollAnimation(event.deltaY);
 });
@@ -166,8 +264,9 @@ window.addEventListener("touchmove", (event) => {
 window.addEventListener("touchend", () => {
   isTouching = false;
 });
-function scrollHandler(){
-  console.log("Scrolled")
+
+// Reset animation when scrolling back up
+window.addEventListener("scroll", () => {
   const scrollPosition = window.scrollY;
   const sectionTop = document.getElementById("scroll-capture-section").offsetTop;
 
@@ -179,9 +278,4 @@ function scrollHandler(){
     animateElements(animationProgress); // Reset elements
     document.body.style.overflowY = "hidden"; // Re-capture scroll
   }
-}
-// Reset animation when scrolling back up
-window.addEventListener("scroll", scrollHandler());
-
-
-
+});

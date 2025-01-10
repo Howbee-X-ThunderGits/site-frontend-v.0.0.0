@@ -1,5 +1,28 @@
+:root {
+  /* Font Families */
+  --font-dm-sans: "DM Sans", sans-serif;
+  --font-fasthand: "Fasthand", sans-serif;
+  --font-felipa: "Felipa", serif;
 
-#yoga-Section-main{
+  /* Font Weights */
+  --font-weight-light: 200;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* Font Sizes */
+  --font-size-xxl: 70px;
+  --font-size-xl: 60px;
+  --font-size-lg: 30px;
+  --font-size-md: 25px;
+  --font-size-sm: 2rem;
+  --font-size-xs-sm: 1.5rem;
+
+  /* Spacing & Padding */
+  --padding-lg: 30px;
+  --padding-md: 20px;
+  --padding-sm: 10px;
+}
+
 .yoga-section {
   width: 100vw;
   height: 100vh;
@@ -18,7 +41,7 @@ header {
 
 header h1 {
   color: #000;
-  font-size: 70px;
+  font-size: 5rem;
   margin-bottom: -50px;
 }
 
@@ -29,14 +52,14 @@ header h1 span.highlight {
   overflow: hidden;
 }
 
-header p {
+/* header p {
   font-family: "Fasthand",cursive;
   color: #000;
-  font-size: 3rem;
+  font-size: 2rem;
   line-height: 1;
   margin-bottom: 10px;
   margin-left: 160px;
-}
+} */
 
 .image-container {
   width: 100%;
@@ -44,6 +67,33 @@ header p {
   display: flex;
   align-items: end;
   justify-content: center;
+}
+
+.yoga-section__title {
+  display: flex;
+  gap: 1rem;
+  font-size: 5rem;
+  color: black;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-dm-sans);
+  padding: 0 1rem;
+}
+
+.yoga-section__subtitle {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-light);
+  font-family: var(--font-fasthand);
+  position: absolute;
+  bottom: -3px;
+  width: 200px;
+}
+
+.yoga-section__title_2 {
+  position: relative;
+}
+
+.highlighted-text {
+  color: var(--primary-yellow);
 }
 
 .yoga-container {
@@ -67,18 +117,19 @@ header p {
 } */
 
 .ellipse {
-  bottom: 0px;
-  left: -80px;
-  height: 50vh;
+  bottom: 95px;
+  left: 0;
+  height: 40vh;
   width: 100%;
   object-fit: contain;
-  z-index: -5;
+  z-index: -3;
   animation: pulse 12s infinite;
   /* border: 2px solid red; */
 }
 
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
   }
   50% {
@@ -88,17 +139,30 @@ header p {
 .right-cloud {
   height: 30vh;
   bottom: 0;
-  right: -60%;
+  right: -35%;
   z-index: -3;
+  opacity: 1; /* Fully visible */
+  transform: translate(200px, 0px); /* Original position */
+  transition: opacity 2s ease, transform 2s ease; /* Smooth transition */
+}
+
+.animate {
+  opacity: 1; /* Fully visible */
+  transform: translate(0, 0); /* Original position */
 }
 
 .left-cloud {
   height: 30vh;
   bottom: 0;
-  left: -50%;
+  left: -40%;
   z-index: -3;
+  transition: opacity 2s ease, transform 2s ease; /* Smooth transition */
 }
 
+.left-cloud {
+  opacity: 1; /* Fully visible */
+  transform: translate(-200px, 0px); /* Original position */
+}
 .right-curve {
   bottom: 0;
   right: -30%;
@@ -113,8 +177,8 @@ header p {
 .para1 {
   font-family: "Fasthand";
   position: absolute;
-  top: 2rem;
-  left: -250px;
+  top: 6rem;
+  left: -150px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -124,15 +188,15 @@ header p {
   font-size: 2rem;
 }
 
-.para1 img {
+/* .para1 img {
   width: 25%;
-}
+} */
 
 .para2 {
   font-family: "Fasthand";
   position: absolute;
   top: 0rem;
-  right: -60%;
+  right: -67%;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -140,23 +204,22 @@ header p {
 }
 
 .para2 p {
-  font-family: "Fasthand",cursive;
+  font-family: "Fasthand", cursive;
 
   font-size: 2rem;
 }
 
 .para2 img {
   width: 12%;
-  position: absolute;
+  /* position: absolute; */
 }
 
 .para2 .tagline {
-  width: 70%;
   text-align: center;
 }
 
 .tagline span {
-  font-family: "Fasthand",cursive;
+  font-family: "Fasthand", cursive;
 
   font-size: 2.5rem;
 }
@@ -197,6 +260,7 @@ header p {
 }
 
 .left2 {
+  left: 20px;
   bottom: 30%;
   position: absolute;
   font-size: 1.5rem;
@@ -220,7 +284,19 @@ header p {
   display: none;
 }
 
-@media (max-width: 1024px) and (min-height:1024px)  {
+.yog-exp  {
+  font-size: 2rem;
+  padding-left: 1rem;
+}
+
+.large-screen {
+  display: block;
+}
+.small-screen {
+  display: none;
+}
+
+@media (max-width: 1024px) and (min-height: 1024px) {
   html {
     font-size: 14px;
   }
@@ -231,20 +307,19 @@ header p {
     right: -275px;
   }
   .para3 {
-    
     right: -70px;
   }
   .para1 {
     left: -100px;
   }
-  .right-curve{
+  .right-curve {
     right: -120px;
   }
-  .left-curve{
+  .left-curve {
     left: -140px;
   }
 }
-@media (max-width: 1024px) and (max-height:800px){
+@media (max-width: 1024px) and (max-height: 800px) {
   html {
     font-size: 14px;
   }
@@ -254,7 +329,6 @@ header p {
   .para2 {
     right: -400px;
   }
-
 }
 /* Media query for max-width 800px */
 @media (max-width: 800px) {
@@ -287,8 +361,18 @@ header p {
   html {
     font-size: 10px;
   }
+  .large-screen {
+    display: none;
+  }
+  .small-screen {
+    display: block;
+  }
   .yoga-container {
     height: 70vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .para2 {
     top: -8rem;
@@ -324,6 +408,7 @@ header p {
   }
   .yoga-header {
     position: unset;
+    padding: 0;
   }
   .yoga-section {
     height: auto;
@@ -334,7 +419,8 @@ header p {
   }
   .ellipse {
     height: 35vh;
-    left: -30px;
+    left: 0%;
+    transform: translate(-25%, -50%);
   }
   .cloud {
     height: 20vh;
@@ -342,11 +428,10 @@ header p {
   .curve-text {
     height: 130px;
   }
-  .right-curve{
+  .right-curve {
     right: -70px;
-
   }
-  .left-curve{
+  .left-curve {
     left: -90px;
   }
 
@@ -357,5 +442,4 @@ header p {
     z-index: -1;
     font-family: "DM Sans";
   }
-}
 }
