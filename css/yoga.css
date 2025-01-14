@@ -392,6 +392,9 @@ header h1 span.highlight {
 
 /* Media query for max-width 400px */
 @media (max-width: 500px) {
+  .tagline2{
+    margin-right: 2rem;
+  }
   .lg-hidden {
     display: block;
   }
