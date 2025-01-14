@@ -55,7 +55,7 @@ hr {
   width: 100vw;
   /* overflow: hidden; */
   position: relative;
-  background-color: #ffffff;
+  background-color: rgb(252, 252, 252);
   transition: background 0.5s ease-out;
   text-align: center;
   /* display: flex;

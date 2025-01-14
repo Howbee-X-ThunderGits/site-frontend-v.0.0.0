@@ -124,7 +124,7 @@ body {
 .column2img {
   transform: translateX(-32%);
   width: 220%;
-  height: 60%; 
+  height: 60%;
   z-index: 2;
 }
 
@@ -159,11 +159,11 @@ body {
 
 .column2 p {
   font-family: "DM sans";
-  
+
   font-size: 19px;
   text-align: center;
-  
-  
+
+
   width: 260px;
   font-weight: 500;
 }
@@ -187,7 +187,7 @@ body {
   width: 280%;
   height: 63%;
 
-transform: translateX(-35%);
+  transform: translateX(-35%);
   z-index: 1;
 }
 
@@ -223,11 +223,11 @@ transform: translateX(-35%);
 
 .column3 p {
   font-family: "DM sans";
-  
+
   font-size: 19px;
   text-align: center;
-  
-  
+
+
   width: 230px;
   font-weight: 500;
 }
@@ -929,14 +929,16 @@ h1 {
 
 
 
-.columns .column1{
-  left: 10%;
-}
-.columns .column3{
-  right: 6%;
-}
+  .columns .column1 {
+    left: 10%;
+  }
+
+  .columns .column3 {
+    right: 6%;
+  }
+
   .statsContainer {
-    height: 60vh;
+    height: 55vh;
   }
 
   .column3 p {
@@ -953,7 +955,7 @@ h1 {
 
   .columns {
     top: 0%;
-    height: 60vh;
+    height: 55vh;
     width: 100%;
   }
 
