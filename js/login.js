@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
             event.preventDefault();
             showLoginForm();
         });
-         document.getElementById("auth-header").innerHTML=`<span style="color: #ff9315; font-family: inherit">Bee</span
+        document.getElementById("auth-header").innerHTML = `<span style="color: #ff9315; font-family: inherit">Bee</span
               > Confident`
         document.getElementById("auth-text").innerHTML = `Begin this wonderful <br/>
             journey with us!`
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             showSignupForm();
         });
-        document.getElementById("auth-header").innerHTML=`<span style="color: #ff9315; font-family: inherit">Bee</span
+        document.getElementById("auth-header").innerHTML = `<span style="color: #ff9315; font-family: inherit">Bee</span
               > Consistent`
         document.getElementById("auth-text").innerHTML = `Pick up right where you <br/>
             left off!`
@@ -94,6 +94,36 @@ document.addEventListener('DOMContentLoaded', function () {
             this.classList.toggle('fa-eye-slash');
         });
     }
+
+
+    
+        const clouds = document.querySelectorAll('.object');
+        const container = document.querySelector('.auth-container');
+        const maxWidth = container.clientWidth; // Max width of the container
+        const maxHeight = container.clientHeight; // Max height of the container
+      
+        function randomizeAnimation(cloud) {
+          const startX = Math.random() * maxWidth - maxWidth / 2;
+          const startY = Math.random() * maxHeight - maxHeight / 2;
+          const midX = Math.random() * maxWidth - maxWidth / 2;
+          const midY = Math.random() * maxHeight - maxHeight / 2;
+          const endX = startX; // End at the start point for continuity
+          const endY = startY; // End at the start point for continuity
+      
+          cloud.style.setProperty('--startX', `${startX}px`);
+          cloud.style.setProperty('--startY', `${startY}px`);
+          cloud.style.setProperty('--midX', `${midX}px`);
+          cloud.style.setProperty('--midY', `${midY}px`);
+          cloud.style.setProperty('--endX', `${endX}px`);
+          cloud.style.setProperty('--endY', `${endY}px`);
+        }
+      
+        setInterval(() => {
+          clouds.forEach(cloud => randomizeAnimation(cloud));
+        }, 10000); // Change animation every 10 seconds
+      
+      
+
 
     signupTab.addEventListener('click', showSignupForm);
     loginTab.addEventListener('click', showLoginForm);

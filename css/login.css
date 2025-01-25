@@ -234,24 +234,24 @@
 .object1 {
   top: 20px;
   right: -80px;
-  animation: moveCloud3 5s infinite;
+  animation: moveCloud 5s infinite;
 }
 
 .object2 {
   bottom: 10px;
   left: 350px;
-  animation: moveCloud1 5s infinite;
-  animation-delay: 2.5s;
+  animation: moveCloud 5s infinite;
+  /* animation-delay: 2.5s; */
 }
 
 .object3 {
   top: 50px;
   left: 0px;
-  animation: moveCloud1 5s infinite;
+  animation: moveCloud 5s infinite;
 }
 
 /* Add keyframe animations */
-@keyframes moveCloud1 {
+/* @keyframes moveCloud1 {
   0% {
     transform: translateX(30vw);
   }
@@ -276,6 +276,20 @@
 
   100% {
     transform: translateX(-30vw);
+  }
+} */
+
+@keyframes moveCloud {
+  0% {
+    transform: translate(var(--startX), var(--startY));
+  }
+
+  50% {
+    transform: translate(var(--midX), var(--midY));
+  }
+
+  100% {
+    transform: translate(var(--endX), var(--endY));
   }
 }
 
@@ -347,10 +361,14 @@
 }
 
 @media screen and (max-width: 600px) {
+  .auth-text-container .para p {
+    font-size: 2rem;
+   
+  }
   html {
     font-size: 10px;
   }
-
+  .object{display: none;}
   .auth-text-container h1 {
     font-size: 4rem;
     margin: 0;
@@ -360,6 +378,7 @@
 }
 
 @media screen and (max-width: 400px) {
+  
   .auth-container {
     padding: 5px;
   }

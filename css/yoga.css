@@ -392,6 +392,9 @@ header h1 span.highlight {
 
 /* Media query for max-width 400px */
 @media (max-width: 500px) {
+  .right-cloud{
+    right: 50%;
+  }
   .tagline2{
     margin-right: 2rem;
   }
@@ -436,6 +439,9 @@ header h1 span.highlight {
   }
   .left-curve {
     left: -90px;
+  }
+  .left-cloud{
+    left: 48%;
   }
 
   .left2 {

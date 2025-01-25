@@ -218,37 +218,37 @@ hr {
   }
 
   .circle-1 {
+    width: 40vw;
+    height: 40vw;
+    top: -20vw;
+    /* Move half of its height up */
+  }
+
+  .circle-2 {
+    width: 55vw;
+    height: 55vw;
+    top: -27.5vw;
+    /* Move half of its height up */
+  }
+
+  .circle-3 {
+    width: 70vw;
+    height: 70vw;
+    top: -35vw;
+    /* Move half of its height up */
+  }
+
+  .circle-4 {
     width: 80vw;
     height: 80vw;
     top: -40vw;
     /* Move half of its height up */
   }
 
-  .circle-2 {
-    width: 125vw;
-    height: 125vw;
-    top: -62.5vw;
-    /* Move half of its height up */
-  }
-
-  .circle-3 {
-    width: 150vw;
-    height: 150vw;
-    top: -75vw;
-    /* Move half of its height up */
-  }
-
-  .circle-4 {
-    width: 175vw;
-    height: 175vw;
-    top: -85.5vw;
-    /* Move half of its height up */
-  }
-
   .circle-5 {
-    width: 200vw;
-    height: 200vw;
-    top: -100vw;
+    width: 100vw;
+    height: 100vw;
+    top: -50vw;
     /* Move half of its height up */
   }
 }

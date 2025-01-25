@@ -927,7 +927,9 @@ h1 {
 
 @media only screen and (min-width: 320px) and (max-width: 499px) {
 
-
+.columns .column2{
+  left: 38%;
+}
 
   .columns .column1 {
     left: 10%;
