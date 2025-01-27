@@ -54,20 +54,21 @@
 .info-section__title {
   display: flex;
   gap: 1rem;
-  font-size: 8rem;
-  font-weight: var(--font-weight-bold);
+  font-size: 6rem;
+  font-weight: 500;
   font-family: var(--font-dm-sans);
   padding:0 1rem;
   transform: translateY(30px)
 }
 
 .info-section__subtitle {
-  font-size: var(--font-size-xs-sm);
+  font-size: 2rem;
   font-weight: var(--font-weight-light);
   font-family: var(--font-fasthand);
   position: absolute;
-  bottom: 30px;
+  bottom: 25px;
   width: 200px;
+  white-space: nowrap;
 }
 @media screen and (max-width:768px) {
   .info-section__title {
@@ -141,10 +142,10 @@
 .info-section__vertical_line {
   position: absolute;
   /* border-right: 1px solid rgba(0, 0, 0, 0.637); */
-  width: 37vw;
+  width: 28rem;
   height: 100%;
   top: 0;
-  z-index: 0;
+  z-index: 50;
 }
 
 .info-section__vertical_line::after {
@@ -154,7 +155,7 @@
   right: 0;
   height: 100%;
   width: 1px; /* Adjust the border width */
-  background: linear-gradient(to bottom, rgba(0, 0, 0,0%), rgba(0, 0, 0, 1));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.082), rgba(0, 0, 0, 0.671));
   z-index: 1;
 }
 
@@ -177,11 +178,12 @@
 }
 .info-section__image-wrapper {
   width: 50%;
-  z-index: 100;
+  /* z-index: 100; */
 }
 .info-section__img {
   width: 100%;
-  
+  position: relative;
+  z-index: 100
 }
 .info-section__form {
   padding: 3rem 1rem;
@@ -223,6 +225,7 @@
   font-size: var(--font-size-xs-sm);
 }
 .info-section__image {
+  z-index: 100;
   background-image: url("../assets/Contact-us/bg.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -260,8 +263,14 @@
 }
 
 /* Small tablets and large phones */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .info-section__vertical_line{
     display: none;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .info-section__cta-text{
+margin-top: 2rem;
   }
 }

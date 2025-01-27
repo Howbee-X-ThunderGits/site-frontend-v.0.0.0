@@ -196,6 +196,21 @@ hr {
   transform: translateX(-50%) translateY(0);
 }
 
+@media screen and (max-width: 850px) {
+  .parallax-head {
+    
+    margin-top: 0;
+    top: -80px;
+  }
+  .parallax-para {
+    
+        margin: 0rem 5rem;
+    margin-bottom: 3rem;
+    top: -85px;
+  }
+
+}
+
 @media screen and (max-width: 500px) {
   .parallax-head {
     font-size: 5rem;

@@ -210,7 +210,8 @@ header h1 span.highlight {
 }
 
 .para2 img {
-  width: 12%;
+  width: 15%;
+  transform: rotate(-100deg);
   /* position: absolute; */
 }
 
@@ -300,17 +301,17 @@ header h1 span.highlight {
   html {
     font-size: 14px;
   }
-  .arrow-right {
-    display: none;
-  }
+ .arrow-right{
+  display: none;
+ }
   .para2 {
-    right: -275px;
+    right: -70px;
   }
   .para3 {
     right: -70px;
   }
   .para1 {
-    left: -100px;
+    left: -70px;
   }
   .right-curve {
     right: -120px;
@@ -323,9 +324,7 @@ header h1 span.highlight {
   html {
     font-size: 14px;
   }
-  .arrow-right {
-    display: none;
-  }
+ 
   .para2 {
     right: -400px;
   }
@@ -339,20 +338,20 @@ header h1 span.highlight {
   .yoga-container {
     height: 70vh;
   }
-  .arrow-left,
+  /* .arrow-left,
   .arrow-right {
     display: none;
-  }
+  } */
   .para2 {
     top: -4rem;
-    right: -120%;
+    right: -25%;
   }
   .para3 {
     top: 25vh;
     right: -70px;
   }
   .para1 {
-    left: -40%;
+    left: -25%;
   }
 }
 
@@ -405,6 +404,9 @@ header h1 span.highlight {
   .para1,
   .para3 {
     position: unset;
+  }
+  .para2 img{
+    transform: rotate(-40deg);
   }
   .lg-show {
     display: block;
