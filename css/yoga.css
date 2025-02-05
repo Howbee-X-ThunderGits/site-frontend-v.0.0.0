@@ -297,6 +297,7 @@ header h1 span.highlight {
   display: none;
 }
 
+
 @media (max-width: 1024px) and (min-height: 1024px) {
   html {
     font-size: 14px;
@@ -328,6 +329,7 @@ header h1 span.highlight {
   .para2 {
     right: -400px;
   }
+  
 }
 /* Media query for max-width 800px */
 @media (max-width: 800px) {
@@ -353,6 +355,7 @@ header h1 span.highlight {
   .para1 {
     left: -25%;
   }
+
 }
 
 /* Media query for max-width 600px */
@@ -386,6 +389,9 @@ header h1 span.highlight {
   }
   .curve-text {
     height: 150px;
+  }
+  .tagline span{
+    font-size: 2rem;
   }
 }
 

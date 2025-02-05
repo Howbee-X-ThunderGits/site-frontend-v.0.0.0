@@ -3,10 +3,10 @@ window.onload = () => {
     const paraElement = document.querySelector('#yoga-right-para2');
     const paraLeftElement = document.querySelector('#yoga-left-para1');
     console.log(paraElement);
-console.log(window.innerWidth);
+    console.log(window.innerWidth);
 
 
-    if (image && paraElement && window.innerWidth > 1024) {
+    if (image && paraElement && window.innerWidth > 1025) {
         let imageWidth = image.width;
         let rightPara = imageWidth - 30;
         let leftPara = imageWidth - 150

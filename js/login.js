@@ -68,6 +68,8 @@ document.addEventListener('DOMContentLoaded', function () {
                         <p>Don't have an account? <a href="#" id="auth-switch-link">Sign Up</a></p>
                     </span>
                 </div>
+                <br>
+                <a href="#">Forgot your password ?</a>
             </form>
         `;
         signupTab.style.background = 'white'

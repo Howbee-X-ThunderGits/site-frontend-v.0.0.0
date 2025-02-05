@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
       content.style.display = "block";
       // document.body.style.overflow = "auto";
       dcancingArrow.style.display = "block"
-      window.scrollTo(0, 0);
+      // window.scrollTo(0, 0);
     } else {
       video.addEventListener("ended", function() {
         console.log("Video ended");
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
         content.style.display = "block";
         document.body.style.overflow = "unset"
         // document.body.style.overflow = "auto";
-        window.scrollTo(0, 0);
+        // window.scrollTo(0, 0);
         // Set the flag to indicate the video has been played
         sessionStorage.setItem("introVideoPlayed", true);
       });

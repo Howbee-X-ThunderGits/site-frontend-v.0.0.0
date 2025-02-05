@@ -51,7 +51,7 @@ hr {
 }
 
 #scroll-capture-section {
-  height: 200vh;
+  height: 500vh;
   width: 100vw;
   /* overflow: hidden; */
   position: relative;
@@ -114,10 +114,10 @@ hr {
 .circle-1 {
   width: 20vw;
   height: 20vw;
-  top: -10vw;
+  top: -20vw;
   /* Move half of its height up */
   left: 50%;
-  transform: translateX(-50%) translateY(-100vh);
+  transform: translateX(-50%);
   background: linear-gradient(to bottom, #ffb55d, #fff4be);
   z-index: 600;
 }
@@ -125,10 +125,10 @@ hr {
 .circle-2 {
   width: 40vw;
   height: 35vw;
-  top: -17.5vw;
+  top: -35vw;
   /* Move half of its height up */
   left: 50%;
-  transform: translateX(-50%) translateY(-100vh);
+  transform: translateX(-50%);
   background: linear-gradient(to bottom, #feac30, #feefac);
   z-index: 400;
 }
@@ -136,10 +136,10 @@ hr {
 .circle-3 {
   width: 60vw;
   height: 50vw;
-  top: -25vw;
+  top: -50vw;
   /* Move half of its height up */
   left: 50%;
-  transform: translateX(-50%) translateY(-100vh);
+  transform: translateX(-50%);
   background: linear-gradient(to bottom, #ffb55d, #fff4be);
   z-index: 200;
 }
@@ -147,10 +147,10 @@ hr {
 .circle-4 {
   width: 80vw;
   height: 65vw;
-  top: -32.5vw;
+  top: -65vw;
   /* Move half of its height up */
   left: 50%;
-  transform: translateX(-50%) translateY(-100vh);
+  transform: translateX(-50%);
   background: linear-gradient(to bottom, #ffffff, #ffed86);
   z-index: 100;
 }
@@ -158,10 +158,10 @@ hr {
 .circle-5 {
   width: 100vw;
   height: 80vw;
-  top: -40vw;
+  top: -80vw;
   /* Move half of its height up */
   left: 50%;
-  transform: translateX(-50%) translateY(-100vh);
+  transform: translateX(-50%);
   background: linear-gradient(to bottom, #ffffff, #ffefa6);
   z-index: 10;
 }
@@ -195,27 +195,85 @@ hr {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
+@media screen and (max-width: 1024px) {
+  .parallax-box{
+    justify-content: center;
+  }
+}
 
 @media screen and (max-width: 850px) {
   .parallax-head {
-    
+
     margin-top: 0;
-    top: -80px;
+    top: 0px;
   }
+
   .parallax-para {
-    
-        margin: 0rem 5rem;
+
+    margin: 0rem 5rem;
     margin-bottom: 3rem;
-    top: -85px;
+   
   }
 
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1300px) and (min-height:750px) {
+  #scroll-capture-section {
+    height: 300vh;
+  }
+}
+
+@media screen and (max-width: 1300px) and (min-height:600px) {
+  #scroll-capture-section {
+    height: 300vh;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-height:1400px) {
+  #scroll-capture-section {
+    height: 250vh; 
+  }
+  .parallax-head {
+    margin-top: 0;
+    top: -30vh;
+  }
+
+  .parallax-para {
+    margin: 0rem 5rem;
+    margin-bottom: 3rem;
+    top: -31vh;
+  }
+}
+
+@media screen and (max-width: 900px) and (min-height:1100px) {
+  #scroll-capture-section {
+    height: 250vh;
+    
+  }
+
+  .parallax-head {
+
+    margin-top: 0;
+    top: -30vh;
+  }
+
+  .parallax-para {
+    margin: 0rem 5rem;
+    margin-bottom: 3rem;
+    top: -31vh;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  #scroll-capture-section {
+    height: 200vh;
+  }
+
   .parallax-head {
     font-size: 5rem;
     margin-top: 0;
-    top: -80px;
+    
   }
 
   .parallax-para {
@@ -223,7 +281,7 @@ hr {
     line-height: 3.5rem;
     margin: 0rem 5rem;
     margin-bottom: 3rem;
-    top: -85px;
+    
   }
 
   .circle {
@@ -233,37 +291,37 @@ hr {
   }
 
   .circle-1 {
-    width: 40vw;
-    height: 40vw;
-    top: -20vw;
+    width: 44vw;
+    height: 44vw;
+    top: -44vw;
     /* Move half of its height up */
   }
 
   .circle-2 {
-    width: 55vw;
-    height: 55vw;
-    top: -27.5vw;
+    width: 58vw;
+    height: 58vw;
+    top: 58vw;
     /* Move half of its height up */
   }
 
   .circle-3 {
-    width: 70vw;
-    height: 70vw;
-    top: -35vw;
+    width: 72vw;
+    height: 72vw;
+    top: -72vw;
     /* Move half of its height up */
   }
 
   .circle-4 {
-    width: 80vw;
-    height: 80vw;
-    top: -40vw;
+    width: 86vw;
+    height: 86vw;
+    top: -86vw;
     /* Move half of its height up */
   }
 
   .circle-5 {
     width: 100vw;
     height: 100vw;
-    top: -50vw;
+    top: -100vw;
     /* Move half of its height up */
   }
 }
